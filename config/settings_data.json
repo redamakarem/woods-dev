@@ -930,7 +930,7 @@
             "type": "menu",
             "settings": {
               "for_item": "FRAGRANCES",
-              "menu": "frangrances"
+              "menu": ""
             }
           }
         },
@@ -984,7 +984,7 @@
             "settings": {
               "title": "",
               "show_title_on_desktop": false,
-              "menu": "footer-1",
+              "menu": "",
               "size": 0,
               "rows_limit": 0
             }
@@ -994,7 +994,7 @@
             "settings": {
               "title": "",
               "show_title_on_desktop": false,
-              "menu": "footer-2",
+              "menu": "",
               "size": 0,
               "rows_limit": 0
             }
@@ -1234,10 +1234,10 @@
         "settings": {
           "collection-title": "FRAGRANCES OF THE SEASON",
           "collection-subtitle": "SPRING\/SUMMER COLLECTION",
-          "product1": "test-product",
-          "product2": "test-product",
-          "product3": "test-product",
-          "product4": "test-product"
+          "product1": "panorama",
+          "product2": "panorama",
+          "product3": "panorama",
+          "product4": "panorama"
         }
       },
       "1664807300be5b3253": {
@@ -1526,11 +1526,6 @@
           "link-1": "shopify:\/\/collections\/best-sellers"
         }
       },
-      "instastory-786": {
-        "type": "instagram_feed_story",
-        "settings": {
-        }
-      },
       "1f64f538-7777-4076-89eb-7ee41c0b8591": {
         "type": "woods-title-section",
         "settings": {
@@ -1547,6 +1542,14 @@
           "container": "boxed",
           "show_separator": false,
           "title": ""
+        }
+      },
+      "de26a4a2-0ab4-4a5c-880c-ac6114068859": {
+        "type": "instafeed",
+        "settings": {
+          "heading_size": 20,
+          "feed_width": 100,
+          "html_area": ""
         }
       }
     },
@@ -1566,7 +1569,7 @@
       "912c8f35-51a9-4634-8e98-1fcca1026a8d",
       "b12bf036-7e46-4187-952e-62798617235a",
       "1f64f538-7777-4076-89eb-7ee41c0b8591",
-      "instastory-786"
+      "de26a4a2-0ab4-4a5c-880c-ac6114068859"
     ]
   }
 }

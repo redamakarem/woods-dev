@@ -1526,11 +1526,6 @@
           "link-1": "shopify:\/\/collections\/best-sellers"
         }
       },
-      "instastory-786": {
-        "type": "instagram_feed_story",
-        "settings": {
-        }
-      },
       "1f64f538-7777-4076-89eb-7ee41c0b8591": {
         "type": "woods-title-section",
         "settings": {
@@ -1565,8 +1560,7 @@
       "855032fe-6679-4778-960b-e80fced9886a",
       "912c8f35-51a9-4634-8e98-1fcca1026a8d",
       "b12bf036-7e46-4187-952e-62798617235a",
-      "1f64f538-7777-4076-89eb-7ee41c0b8591",
-      "instastory-786"
+      "1f64f538-7777-4076-89eb-7ee41c0b8591"
     ]
   }
 }

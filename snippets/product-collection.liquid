@@ -152,7 +152,11 @@
                             <h4 class="m-0 ">
                                 {% include 'product-get-price' %}
                             </h4>
+
                         </div>
+                        <h5 class="m-0 ft-helvetica text-uppercase">
+                            <a class="font-size-12 font-size-ls-10" href="{{ url }}">{{ metafields.custom.woods_subtitle }}</a>
+                        </h5>
                     </div>
                 {%- endif -%}
                 {%- if show_sku or show_barcode or show_availability or show_type or show_vendor -%}

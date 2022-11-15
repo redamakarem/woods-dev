@@ -930,7 +930,7 @@
             "type": "menu",
             "settings": {
               "for_item": "FRAGRANCES",
-              "menu": "frangrances"
+              "menu": ""
             }
           }
         },
@@ -984,7 +984,7 @@
             "settings": {
               "title": "",
               "show_title_on_desktop": false,
-              "menu": "footer-1",
+              "menu": "",
               "size": 0,
               "rows_limit": 0
             }
@@ -994,7 +994,7 @@
             "settings": {
               "title": "",
               "show_title_on_desktop": false,
-              "menu": "footer-2",
+              "menu": "",
               "size": 0,
               "rows_limit": 0
             }
@@ -1234,10 +1234,10 @@
         "settings": {
           "collection-title": "FRAGRANCES OF THE SEASON",
           "collection-subtitle": "SPRING\/SUMMER COLLECTION",
-          "product1": "test-product",
-          "product2": "test-product",
-          "product3": "test-product",
-          "product4": "test-product"
+          "product1": "panorama",
+          "product2": "panorama",
+          "product3": "panorama",
+          "product4": "panorama"
         }
       },
       "1664807300be5b3253": {

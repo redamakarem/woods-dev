@@ -118,7 +118,7 @@
     "product_collection_show_barcode": false,
     "product_collection_show_availability": true,
     "product_collection_show_type": true,
-    "product_collection_show_vendor": true,
+    "product_collection_show_vendor": false,
     "product_collection_show_description": true,
     "product_collection_list_show_quantity": false,
     "product_info_layout": "3",

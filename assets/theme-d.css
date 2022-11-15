@@ -9597,3 +9597,7 @@ html.css-full-loaded body.theme-css-animate .product-gallery__thumbnail_item > *
 .product-gallery__sheet[data-js-product-gallery-control-fullscreen] {
   cursor: var(--product-gallery-cursor) !important;
 }
+
+.product-collection__button-add-to-cart {
+  width: 100%;
+}

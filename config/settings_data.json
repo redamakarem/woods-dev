@@ -100,7 +100,7 @@
     "product_collection_show_label_new": true,
     "product_collection_show_label_hot": true,
     "product_collection_centered_info": false,
-    "product_collection_more_info_type": "vendor",
+    "product_collection_more_info_type": "hide",
     "product_collection_show_title": true,
     "product_collection_show_price": true,
     "product_collection_show_button_quick_view": false,

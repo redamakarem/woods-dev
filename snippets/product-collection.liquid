@@ -1,3 +1,4 @@
+{{ 'woods-collection-styles.css' | asset_url | stylesheet_tag }}
 {% include 'global-variables' %}
 {%- if settings.product_format_pjpg -%}
     {%- assign image_format = 'pjpg' -%}

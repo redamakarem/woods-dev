@@ -1,0 +1,83 @@
+<section>
+  <div class="d-flex mb-40 legal-style ">
+  
+    <div class="text-center w-50 align-self-center legal-margin-phone">
+      <ol class="legal-list-style">
+        <li class="pb-5 tab active" href="#paper1">Privacy Policy</li>
+        <li class="pb-5 tab" href="#paper2">Terms and Conditions</li>
+        <li class="pb-5 tab" href="#paper3">Returns & Exchanges</li>
+        <li class="tab" href="#paper4">Shipping</li>
+      </ol>
+      
+    </div>
+  
+  <div class="w-75">
+    <div class="tab-content active ft-helvetica" id="paper1">
+      {{ section.settings.privacy }}
+    </div>
+    <div class="tab-content ft-helvetica" id="paper2">
+        {{ section.settings.terms }}
+    </div>
+    <div class="tab-content ft-helvetica" id="paper3">
+        {{ section.settings.returns }}
+    </div>
+    <div class="tab-content ft-helvetica" id="paper4">
+        {{ section.settings.shipping }}
+    </div>
+
+</div>
+  </div>
+    
+</section>
+{% schema %}
+  {
+    "name": "Woods Legal",
+    "settings": [
+      {
+          "id": "privacy",
+          "label": "Privacy",
+          "type": "richtext"
+    },{
+          "id": "terms",
+          "label": "Terms",
+          "type": "richtext"
+    },{
+          "id": "returns",
+          "label": "Returns",
+          "type": "richtext"
+    },{
+          "id": "shipping",
+          "label": "Shipping",
+          "type": "richtext"
+    }
+    ],
+      "presets": [{
+          "name": "Woods Legal",
+          "category": "Woods "
+      }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+  $(document).on("click",".tab", function(e){
+  //prevent default behaviour of a tag
+  e.preventDefault()
+  
+ //element clicked on
+ var clickedTab =  $(this);
+  //id of the target content
+ var tabContentId = $(this).attr('href')
+ 
+  //remove the active class from all tabs and tab content elements
+ $('.tab').removeClass('active')
+ $('.tab-content').removeClass('active')
+ 
+  //add the active class to clicked tab and corresponding tab content element
+ clickedTab.addClass('active');
+ $(tabContentId).addClass('active');
+ 
+})
+{% endjavascript %}

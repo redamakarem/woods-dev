@@ -1,0 +1,45 @@
+{{ 'woods-title-section.css' | asset_url | stylesheet_tag }}
+
+
+<div >
+
+    <div class="title-content">
+      <h1>{{ section.settings.woods-title-content}}</h1>
+  </div>
+  
+</div>
+
+
+{% schema %}
+  {
+    "name": "Woods Title Section",
+    "settings": [
+      {
+            "id": "woods-title-content",
+            "type": "text",
+            "label": "Title"
+        }
+      
+    ],
+    "presets": [
+        {
+            "name": "Woods Title Section",
+            "category": "Woods"
+        }
+    ]
+      
+    
+  }
+{% endschema %}
+
+{% stylesheet %}
+    @font-face {
+    font-family: "helvl";
+    src: url({{ "helv-light.woff" | asset_url }});
+    }
+{% endstylesheet %}
+
+{% javascript %}
+  	
+
+{% endjavascript %}

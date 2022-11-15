@@ -1,0 +1,118 @@
+{{ 'woods-carousel-ticker.css' | asset_url | stylesheet_tag }}
+
+<div class="carouselTicker my-10 border">
+  <ul class="carouselTicker__list">
+   {%- for block in section.blocks -%}
+         <li class="carouselTicker__item">
+             <div class='ticker-item-wrapper'>
+               <img src="{{ block.settings.ticker-item-image | img_url }}" />
+               <div class="ticker-item-text">{{ block.settings.ticker-item-text }}</div>
+             </div>
+         </li>
+     {%- endfor -%}
+  </ul>
+</div>
+
+{% schema %}
+  {
+    "name": "Carousel Ticker",
+    "settings": [
+      {
+            "id": "blog-posts-slider",
+            "type": "text",
+            "label": "Add a blog posts slider"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Carousel Ticker",
+            "category": "Carousels"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Ticker Item",
+            "type": "ticker-item",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "ticker-item-image",
+                    "label": "Ticker Item Image"
+                },
+              {
+                    "type": "text",
+                    "id": "ticker-item-text",
+                    "label": "Ticker Item Text"
+                }
+                
+            ]
+        }
+    ]
+    
+    
+  }
+{% endschema %}
+
+{% stylesheet %}
+  .carouselTicker {
+  overflow: hidden;
+  float: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.carouselTicker__item {
+    width: auto !important;
+    height: auto !important;
+    border: none !important;
+}
+
+
+.ticker-item-wrapper {
+    display: flex;
+    align-items: center;
+}
+  .ticker-item-wrapper img {
+    margin-right: 30px;
+    width: 36px;
+    
+}
+  .ticker-item-text {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    color: #1C1A00;
+}
+
+  ul.slick-dots {
+    display: none !important;
+}
+  
+  
+
+  
+{% endstylesheet %}
+
+{% javascript %}
+  	$(".carouselTicker").carouselTicker({
+
+  // animation speed
+  speed: 1,
+
+  // animation delay
+  delay: 30,
+
+  // or 'next'
+  direction: "next",
+
+  // or 'vertical'
+  mode: "horizontal",
+
+  
+});
+
+{% endjavascript %}

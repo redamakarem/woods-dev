@@ -1,0 +1,58 @@
+#CollectionProducts button.btn.btn--status.js-product-button-add-to-cart {
+  width: 100%;
+  padding: 13px 0px;
+  background-color: black;
+  border-radius: 8px;
+  color: white;
+}
+
+h1.mb-10.d-lg-block.text-center.text-lg-left {
+  text-align: center !important;
+  font-size: 60px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.collection-page-heading__wrapper .rte {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #1c1a00;
+}
+
+#CollectionProducts button.btn.btn--status.js-product-button-add-to-cart span {
+  color: white;
+}
+
+.woods-product-data-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+@media screen and (max-width: 767px){
+
+
+    .collection-grid-centered-xs .product-collection__image{
+        max-width: none;
+    }
+
+    h1.mb-10.d-lg-block.text-center.text-lg-left {
+        font-size: 32px;
+    }
+
+    .collection-page-heading__wrapper .rte{
+        display: block !important;
+    }
+}
+.select__dropdown>div>span{
+  color:black;
+  font-family:Helvetica;
+}

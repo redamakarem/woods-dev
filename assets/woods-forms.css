@@ -1,0 +1,22 @@
+label{
+    display: none;
+}
+
+input{
+    border: 1px solid #E8E8E6;
+    border-radius: 8px;
+    padding: 16px 24px;
+}
+button{
+    border-radius: 8px;
+}
+
+input::placeholder{
+    font-family: 'Helvetica';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 22px;
+text-transform: uppercase;
+color: #1C1A00;
+}

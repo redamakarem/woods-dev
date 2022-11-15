@@ -1,0 +1,44 @@
+.acc-pop-width{
+  width:350px;
+}
+@media screen and (max-width: 768px) {
+  .popup-account-main{
+  height:100%;
+  align-items:center;
+  }
+}
+
+#PopupCustomerEmail::placeholder,#PopupCustomerPassword::placeholder,#PopupFirstName::placeholder,#PopupLastName::placeholder,#PopupEmail::placeholder,#PopupCreatePassword::placeholder,#RecoverEmail::placeholder{
+  color:black;
+  opacity: 1;
+}
+
+#PopupCustomerEmail:-ms-input-placeholder ,#PopupCustomerPassword:-ms-input-placeholder,#PopupFirstName:-ms-input-placeholder,#PopupLastName:-ms-input-placeholder,#PopupEmail:-ms-input-placeholder,#PopupCreatePassword:-ms-input-placeholder,#RecoverEmail:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+  color: black;
+}
+
+#PopupCustomerEmail::-ms-input-placeholder,#PopupCustomerPassword::-ms-input-placeholder,#PopupFirstName::-ms-input-placeholder,#PopupLastName::-ms-input-placeholder,#PopupEmail::-ms-input-placeholder,#PopupCreatePassword::-ms-input-placeholder,#RecoverEmail::-ms-input-placeholder{ /* Microsoft Edge */
+  color: black;
+}
+#togglePassword,#togglePasswordSignup{
+    cursor: pointer;
+    position: absolute;
+    right: 7px;
+    top: 0;
+    bottom: 0;
+}
+.input-login-popup{
+  padding:16px 14px !important;
+  border-radius:8px;
+  font-size:12px !important;
+  font-weight:700 !important;
+}
+#buttons-account-popup{
+    font-size: 12px;
+    font-weight:700;
+    line-height:16px;
+    text-decoration: underline;
+}
+.privacy-policy-account{
+    text-decoration: underline !important;
+}

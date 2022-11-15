@@ -1,0 +1,298 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "show_title": true,
+        "show_content": true
+      }
+    },
+    "87ac4f29-6ceb-436b-8301-bc5f2d1aa180": {
+      "type": "woods-title-mask",
+      "settings": {
+        "mask-title": "Let nature show you the way",
+        "mask-image": "shopify:\/\/shop_images\/about-title-bg.png"
+      }
+    },
+    "2bd59e41-1765-42ac-a343-f54a40056161": {
+      "type": "home-builder",
+      "settings": {
+        "title": "<p><em><strong>What secrets are hidden deep within the woods?<\/strong><\/em><\/p>",
+        "container": "boxed",
+        "size_of_columns": "1",
+        "size_of_columns_mobile": "1",
+        "margins_for_columns": "none",
+        "align_of_columns": "top_center",
+        "disable_column_paddings": false,
+        "precedence": "",
+        "customization_class": "secrets-spacing"
+      }
+    },
+    "c603947c-a11e-41a8-9d83-a88ac164fef2": {
+      "type": "home-builder",
+      "settings": {
+        "title": "<p>Journey through thorny thickets, over wild roots and muddy banks, and you’ll discover where the forest conceals her treasures. Wild scrub gives way to towering pine and oak. Sunlight filters through vaulted canopies above. Natural rhythms of the forest hum around you. Scents of sweet balsam, woody amber and rich vanilla pine fill your senses. In the calm of the forest, the rest of the world fades away. When the woods reveals her secrets, we listen. Prepare your senses for the journey. The Woods fragrances are produced in France at the hands of masters of the perfuming craft.<\/p>",
+        "container": "fullwidth",
+        "size_of_columns": "2",
+        "size_of_columns_mobile": "1",
+        "margins_for_columns": "preset_3",
+        "align_of_columns": "top_center",
+        "disable_column_paddings": false,
+        "precedence": "",
+        "customization_class": "col-md-5 mx-auto font-helvetica"
+      }
+    },
+    "8fa76d71-12fc-495c-a8b7-2cbbba084219": {
+      "type": "home-builder",
+      "disabled": true,
+      "blocks": {
+        "4c07b0cb-10bd-4bd5-830d-89ce35fe8a06": {
+          "type": "slick_slider",
+          "settings": {
+            "height": "preset_2",
+            "min_height": 0,
+            "size_of_column": "12",
+            "arrows": false,
+            "bullets": true,
+            "speed": 7
+          }
+        },
+        "1c5246ae-018b-4c2a-bb52-fdeb086a596f": {
+          "type": "slick_slide",
+          "settings": {
+            "url": "",
+            "image": "shopify:\/\/shop_images\/about-slide.png",
+            "image_size": 2000,
+            "image_mobile": "shopify:\/\/shop_images\/about-slide-mobile.png",
+            "image_mobile_size": 550,
+            "image_position_x": 50,
+            "color_image_mask": "",
+            "image_mask_opacity": 0.5,
+            "text_line_1": "",
+            "text_line_2": "Brand Quadrant",
+            "text_line_3": "Despite the rise of chemical scents, it clings to the natural production of perfumes through natural extracts and decades- old methods and techniques.",
+            "style": "1",
+            "button_1": "",
+            "button_1_url": "",
+            "color_button_type_1": "default",
+            "button_2": "",
+            "button_2_url": "",
+            "color_button_type_2": "default",
+            "custom_html": "",
+            "video_external_url": "",
+            "video_mp4_url": "",
+            "video_autoplay": true,
+            "video_controls": false,
+            "type": "type-1-2",
+            "content_position": "center",
+            "content_align": "center",
+            "add_container": false,
+            "content_width": 100,
+            "text_width": 0,
+            "animation_text": "none",
+            "color_text_1": "",
+            "color_text_2": "",
+            "color_text_3": "",
+            "color_text_bg": "",
+            "color_curtain_bg": "",
+            "customization_class": ""
+          }
+        }
+      },
+      "block_order": [
+        "4c07b0cb-10bd-4bd5-830d-89ce35fe8a06",
+        "1c5246ae-018b-4c2a-bb52-fdeb086a596f"
+      ],
+      "settings": {
+        "title": "",
+        "container": "fullwidth",
+        "size_of_columns": "1",
+        "size_of_columns_mobile": "1",
+        "margins_for_columns": "none",
+        "align_of_columns": "center",
+        "disable_column_paddings": false,
+        "precedence": "",
+        "customization_class": ""
+      }
+    },
+    "2bb96f95-0237-4386-925b-2962bdaea694": {
+      "type": "woods-image-bg-ticker",
+      "blocks": {
+        "108ed3aa-7aba-4eb0-975c-f400ea643e66": {
+          "type": "ticker-item",
+          "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
+            "ticker-item-text": "HIDDEN"
+          }
+        },
+        "69206a47-723f-4a78-b796-8a5d6d75927d": {
+          "type": "ticker-item",
+          "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
+            "ticker-item-text": "TREASURE"
+          }
+        },
+        "13e53aa7-b99b-43f2-9ae8-98fdeefbd228": {
+          "type": "ticker-item",
+          "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
+            "ticker-item-text": "WILD"
+          }
+        },
+        "6af2d2c8-288c-4908-83a7-56cb3b17ae3b": {
+          "type": "ticker-item",
+          "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
+            "ticker-item-text": "RARE"
+          }
+        },
+        "24fd657f-0911-4060-b6f5-f4207263c5c5": {
+          "type": "ticker-item",
+          "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
+            "ticker-item-text": "NATURE"
+          }
+        },
+        "8b2d3820-7213-434e-881c-5516335b668c": {
+          "type": "ticker-item",
+          "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
+            "ticker-item-text": "PARADISE"
+          }
+        },
+        "55a326de-800a-4416-8ff1-52ccd19dbf62": {
+          "type": "ticker-item",
+          "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
+            "ticker-item-text": "SECRET"
+          }
+        }
+      },
+      "block_order": [
+        "108ed3aa-7aba-4eb0-975c-f400ea643e66",
+        "69206a47-723f-4a78-b796-8a5d6d75927d",
+        "13e53aa7-b99b-43f2-9ae8-98fdeefbd228",
+        "6af2d2c8-288c-4908-83a7-56cb3b17ae3b",
+        "24fd657f-0911-4060-b6f5-f4207263c5c5",
+        "8b2d3820-7213-434e-881c-5516335b668c",
+        "55a326de-800a-4416-8ff1-52ccd19dbf62"
+      ],
+      "settings": {
+        "blog-posts-slider": "asd asd asd",
+        "main-image": "shopify:\/\/shop_images\/about-slide.png",
+        "mobile-image": "shopify:\/\/shop_images\/about-slide-mobile.png",
+        "main-title": "Brand Quadrant",
+        "second-text": "Despite the rise of chemical scents, it clings to the natural production of perfumes through natural extracts and decades- old methods and techniques."
+      }
+    },
+    "2f3cb0d0-6a9e-41b2-9f8c-dbdd98c4d094": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 60,
+        "margin_bottom": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    },
+    "6093090a-f78d-463b-8d21-c06212eaac50": {
+      "type": "woods-brand-personality",
+      "blocks": {
+        "ec579db9-aa0b-4e2d-8ff5-b62c9dddc974": {
+          "type": "column-elements",
+          "settings": {
+            "column-image": "shopify:\/\/shop_images\/brand-personality1.png",
+            "column-content": "<h3>SECRETS &amp; SEDUCTION<\/h3>\n<ul class=\"text-dark font-size-12 line-height-16\">\n<li>SULTRY<\/li>\n<li>SENSUAL<\/li>\n<li>TEMPTING<\/li>\n<li>ENTIVE<\/li>\n<li>ALLURE<\/li>\n<li>PROMISE<\/li>\n<li>UNION<\/li>\n<li>BEAUTY<\/li>\n<\/ul>"
+          }
+        },
+        "e9e1b668-726d-4104-b813-d2a6b2ef0ceb": {
+          "type": "column-elements",
+          "settings": {
+            "column-image": "shopify:\/\/shop_images\/IMGL4040.png",
+            "column-content": "<h3>DARK &amp;\n LIGHT<\/h3>\n<ul class=\"text-dark font-size-12 line-height-16\">\n<li>SUNLIGHT<\/li>\n<li>SHADOWS<\/li>\n<li>TWILIGHT<\/li>\n<li>DEEP<\/li>\n<li>SHINE<\/li>\n<li>PURE<\/li>\n<li>REVEAL<\/li>\n<li>CONCEAL<\/li>\n<\/ul>"
+          }
+        },
+        "00f26911-801c-4025-8968-7f35ce1504dd": {
+          "type": "column-elements",
+          "settings": {
+            "column-image": "shopify:\/\/shop_images\/IMGL4135_B.png",
+            "column-content": "<h3>DISCOVER THE UNKNWNON <\/h3>\n<ul class=\"text-dark font-size-12 line-height-16\">\n<li>HIDDEN<\/li>\n<li>TREASURES<\/li>\n<li>WILD<\/li>\n<li>RARE<\/li>\n<li>NATURE<\/li>\n<li>PARADISE<\/li>\n<li>SECRET<\/li>\n<li>JOURNEY<\/li>\n<\/ul>"
+          }
+        },
+        "8cf6988b-a502-4d59-a435-3da24cddf444": {
+          "type": "column-elements",
+          "settings": {
+            "column-image": "shopify:\/\/shop_images\/IMGL3210.png",
+            "column-content": "<h3>STRENGTH &amp; CALM<\/h3>\n<ul class=\"text-dark font-size-12 line-height-16\">\n<li>TIMELESS<\/li>\n<li>POWER<\/li>\n<li>FOREVER<\/li>\n<li>LINGER<\/li>\n<li>CONTENT<\/li>\n<li>MINDFUL<\/li>\n<li>ENDURE<\/li>\n<li>OVERCOME<\/li>\n<\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "ec579db9-aa0b-4e2d-8ff5-b62c9dddc974",
+        "e9e1b668-726d-4104-b813-d2a6b2ef0ceb",
+        "00f26911-801c-4025-8968-7f35ce1504dd",
+        "8cf6988b-a502-4d59-a435-3da24cddf444"
+      ],
+      "settings": {
+        "brand-personality-title": "Brand Personality"
+      }
+    },
+    "8fef3771-46e1-4667-8b03-809a043742a8": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 60,
+        "margin_bottom": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    },
+    "a1fe8d3e-eaeb-4904-b47d-7e5090b52135": {
+      "type": "image-with-text",
+      "settings": {
+        "text-section": "<h2 class=\"font-size-60 line-height-60 font-size-ls-32 line-height-ls-32 m-0\">Paradise<\/h2>\n\n<p class=\"font-size-20 font-size-ls-18 line-height-28 line-height-ls-24\">\nOn the hills near <strong><i class=\"font-weight-bold\">Siena, Italy<\/i> <\/strong>, hides a farm in a small patch of land between the shades of an oak forest. After being abandoned for 60 years, the farm now hosts a Perfumer Garden with wild and cultivated flora dedicated to the art of perfume. The farm is every perfumer’s dream garden with its ancient and new cultivars, and its own distilleries.\n<\/p>",
+        "image-section": "shopify:\/\/shop_images\/Screen_Shot_2022-06-01_at_06.29_1.png",
+        "layout": "row-normal"
+      }
+    },
+    "0ae3de84-a21a-4e17-806e-b854748fbd32": {
+      "type": "image-with-text",
+      "settings": {
+        "text-section": "<h2 class=\"font-size-60 line-height-60 font-size-ls-32 line-height-ls-32 m-0\">Techniques<\/h2>\n<p class=\"font-size-20 font-size-ls-18 line-height-28 line-height-ls-24\">\nIt is also a space of research and innovation for Vincent Gambino, nose and artistic director of Amaranthus Herbis collections, who links traditional and modern techniques to open up to artistic perfumery. Vincent Gambino is the expert hand behind the perfect picking for each and every ingredient for The Woods Collection niche fragrances.\n<\/p>",
+        "image-section": "shopify:\/\/shop_images\/Screen_Shot_2022-06-01_at_06.31_1.png",
+        "layout": "row-reverse"
+      }
+    },
+    "ef0f3376-4968-4e27-9f38-1c7ec67eae6e": {
+      "type": "spacer",
+      "settings": {
+        "margin_top": 60,
+        "margin_bottom": 0,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 0,
+        "container": "boxed",
+        "show_separator": false,
+        "title": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "87ac4f29-6ceb-436b-8301-bc5f2d1aa180",
+    "2bd59e41-1765-42ac-a343-f54a40056161",
+    "c603947c-a11e-41a8-9d83-a88ac164fef2",
+    "8fa76d71-12fc-495c-a8b7-2cbbba084219",
+    "2bb96f95-0237-4386-925b-2962bdaea694",
+    "2f3cb0d0-6a9e-41b2-9f8c-dbdd98c4d094",
+    "6093090a-f78d-463b-8d21-c06212eaac50",
+    "8fef3771-46e1-4667-8b03-809a043742a8",
+    "a1fe8d3e-eaeb-4904-b47d-7e5090b52135",
+    "0ae3de84-a21a-4e17-806e-b854748fbd32",
+    "ef0f3376-4968-4e27-9f38-1c7ec67eae6e"
+  ]
+}

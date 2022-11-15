@@ -1,0 +1,30 @@
+<div>
+  {{ section.settings.woods-richtext }}
+</div>
+
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+     {
+        "id":"woods-richtext",
+      "label":"text-comtent",
+      "type":"richtext"
+     }
+      
+    ],
+    "presets": [
+        {
+            "name": "Woods Richtext",
+            "category": "Woods"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

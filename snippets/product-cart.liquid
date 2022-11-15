@@ -1,0 +1,35 @@
+
+{% include 'global-variables' %}
+{% include 'product-cart-res-variables' %}
+{%- assign image_size = '100x' -%}
+<div class="product-cart mb-20 border-0" data-js-product data-product-variant-id="{{ id }}" data-product-cart-line="{{ forloop.index }}">
+    <div class="d-flex flex-row align-items-start justify-content-around">
+        <div class="product-cart__image mr-15">
+            {% render 'product-get-images' with url: url image: image image_size: image_size title: title disable_lazyload: disable_lazyload %}
+        </div>
+            <div class="col-8 product-cart__content d-flex flex-column p-0">
+              <div class="d-flex justify-content-between align-items-center bag-title-height">
+                <div class="product-cart__title">
+                  <h3 class="h5 m-0">
+                    <a class="text-uppercase" href="{{ url }}">{{ title }}</a>
+                  </h3>
+                </div>
+            </div>
+            {% capture default_variant_title %}{{ 'products.product.default_variant_title' | t }}{% endcapture %}
+            <div class="product-cart__variant ft-helvetica{% if variant_title == 'Default Title' %} d-none{% endif %}">{{ variant_title | replace: 'Default Title', default_variant_title }}</div>
+            <div class="product-cart__price mb-10 mt-5 ft-helvetica">
+<!--                 <span>{{ 'layout.cart.quantity_and_price_separator' | t }}</span> -->
+              <span class="product-cart__price-value ft-helvetica">{% include 'product-get-price' %}</span>
+            </div>
+          <div class="col-5 text-center border rounded py-5 ft-helvetica"><span class="product-cart__quantity text-dark">{{ quantity }}</span> </div>
+        </div>
+      <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="product-cart__remove btn-link js-product-button-remove-from-cart"><i class="m-0">{% render 'icon-theme-190' %}</i></a>
+    </div>
+    {%- if settings.cart_popup_show_quantity_input -%}
+        <div class="input-quantity input-quantity--type-05 d-flex mt-15 js-product-quantity">
+            <div class="d-flex flex-center border cursor-pointer" data-control="-"><i>{% render 'icon-theme-189' %}</i></div>
+            <input type="number" class="product-cart__input-quantity w-100 mx-10 mb-0 text-center js-input-quantity-cart" name="updates[]" value="{{ quantity }}" min="1">
+            <div class="d-flex flex-center border cursor-pointer" data-control="+"><i>{% render 'icon-theme-188' %}</i></div>
+        </div>
+    {%- endif -%}
+</div>

@@ -1,0 +1,229 @@
+{{ 'woods-account.css' | asset_url | stylesheet_tag }}
+{% include 'breadcrumbs' %}
+<div class="account pb-100">
+  <div class="px-lg-100">
+<!--     <h1 class="h3 mt-30 mb-40 text-center">{{ 'customer.account.title' | t }}</h1> -->
+    <div class="mt-60 mb-40 d-none d-lg-flex">
+      <h2 class="col-3 text-left font-weight-bold">Your account</h2>
+      <h2 class="col-8 text-left font-weight-bold">Account details</h2>
+    </div>
+    <h3 class="d-block d-lg-none col-12 text-left mt-30">Your account</h2>
+    <tabs-element class="tabs col-lg-12 flex-column flex-lg-row p-0" data-type="horizontal">
+      <div class="tabs__head border-0 col-lg-3 text-left p-0" data-js-tabs-head>
+
+        
+<!--         tabs-mobile -->
+<!--         <div class="d-flex d-lg-none text-dark justify-content-around">
+          <div class="tabs__btn border-0 ft-helvetica font-weight-bold p-0 act-acc" data-js-tabs-btn-mobile>{{ 'customer.account.details_tab' | t }}</div>
+          <div class="tabs__btn border-0 ft-helvetica font-weight-bold p-0" data-js-tabs-btn-mobile>{{ 'customer.orders.tab' | t }}</div>
+          <a href="/account/logout" class="logout-acc ft-helvetica font-weight-bold text-left">{{ "general.popups.account.authorized.log_out" | t }}</a>
+          </div> -->
+
+        <!--         tabs-desktop -->
+        <div class="d-lg-flex d-none tabs__slider justify-content-lg-center" data-js-tabs-slider>
+
+          <div class="tabs__btn active border-0 ft-helvetica font-weight-bold p-0 mb-10 text-dark act-acc" data-js-tabs-btn>{{ 'customer.account.details_tab' | t }}</div>
+          <div class="tabs__btn border-0 ft-helvetica font-weight-bold p-0 text-dark text-left" data-js-tabs-btn data-active="true">{{ 'customer.orders.tab' | t }}</div>
+          <a href="/account/logout" class="mt-20 logout-acc ft-helvetica font-weight-bold text-left">{{ "general.popups.account.authorized.log_out" | t }}</a>
+        </div>
+<!--         <div class="tabs__nav tabs__nav--prev" data-js-tabs-nav-prev><i>{% render 'icon-theme-006' %}</i></div>
+        <div class="tabs__nav tabs__nav--next" data-js-tabs-nav-next><i>{% render 'icon-theme-007' %}</i></div> -->
+      </div>
+      <div class="tabs__body border-0 col-lg-8 p-0">
+        <div class="active"  data-js-tabs-tab>
+          <span data-js-tabs-btn-mobile>{{ 'customer.account.details_tab' | t }} <i>{% render 'icon-theme-188' %}</i></span>
+          <div class="tabs__content rte overflow-hidden p-0" data-js-tabs-content style="display: block;">
+            
+            <h3 class="d-block d-lg-none col-12 pt-30 pb-10 border-bottom text-left">Account details</h2>
+            
+            <h2 class="d-block d-lg-none col-12 h4 mb-10 text-left ft-helvetica font-weight-bold">INFORMATION</h2>
+            <div class="col-12 border-bottom p-0 d-none d-lg-inline-flex">
+            <h2 class="col-6 h4 mb-10 text-left ft-helvetica font-weight-bold">INFORMATION</h2>
+            <h2 class="col-6 h4 mb-10 text-left ft-helvetica font-weight-bold">SHIPPING ADDRESS</h2>
+            </div>
+            <div class="d-inline-flex col-12 p-0 flex-column flex-lg-row">
+              <div class="col-12 col-lg-6 text-center text-lg-left col-lg-5 py-20 text-dark ft-helvetica border-right">
+                <div class="pb-5">
+                {{ customer.name }}
+                </div>
+                <div class="pb-25">
+                {{ customer.email }}
+                </div>
+                <div>
+                  <button class="btn col-5 col-lg-12 btn--full btn--secondary rounded" disabled>EDIT ACCOUNT</button>
+                </div>
+              </div>
+              
+            <h2 class="d-block d-lg-none col-12 h4 mb-10 text-left ft-helvetica font-weight-bold">SHIPPING ADDRESS</h2>
+
+              <div class="col-12 col-lg-6 text-center text-lg-left py-20 text-dark ft-helvetic">
+            {%- if customer.default_address == blank -%}
+              <div class="pb-52">You haven't set up a shipping address yet</div>
+            {%- endif -%}
+            {%- if customer.default_address != blank -%}
+              <div class="table-wrapper">
+                <table class="table-account responsive-table mb-30">
+                  {%- if customer.default_address.first_name != blank -%}
+                    <tr>
+                      <td>{{ 'customer.addresses.first_name' | t }}:</td>
+                      <td>{{ customer.default_address.first_name }}</td>
+                    </tr>
+                  {%- endif -%}
+                  {%- if customer.default_address.last_name != blank -%}
+                    <tr>
+                      <td>{{ 'customer.addresses.last_name' | t }}:</td>
+                      <td>{{ customer.default_address.last_name }}</td>
+                    </tr>
+                  {%- endif -%}
+                  {%- if customer.default_address.address1 != blank -%}
+                    <tr>
+                      <td>{{ 'customer.addresses.address1' | t }}:</td>
+                      <td>{{ customer.default_address.address1 }}</td>
+                    </tr>
+                  {%- endif -%}
+                  {%- if customer.default_address.address2 != blank -%}
+                    <tr>
+                      <td>{{ 'customer.addresses.address2' | t }}:</td>
+                      <td>{{ customer.default_address.address2 }}</td>
+                    </tr>
+                  {%- endif -%}
+                  {%- if customer.default_address.company != blank -%}
+                    <tr>
+                      <td>{{ 'customer.addresses.company' | t }}:</td>
+                      <td>{{ customer.default_address.company }}</td>
+                    </tr>
+                  {%- endif -%}
+                  {%- if customer.default_address.city != blank -%}
+                    <tr>
+                      <td>{{ 'customer.addresses.city' | t }}:</td>
+                      <td>{{ customer.default_address.city }}</td>
+                    </tr>
+                  {%- endif -%}
+                  {%- if customer.default_address.province != blank -%}
+                    <tr>
+                      <td>{{ 'customer.addresses.province' | t }}:</td>
+                      <td>{{ customer.default_address.province }}</td>
+                    </tr>
+                  {%- endif -%}
+                  {%- if customer.default_address.province_code != blank -%}
+                    <tr>
+                      <td>{{ 'customer.addresses.province_code' | t }}:</td>
+                      <td>{{ customer.default_address.province_code }}</td>
+                    </tr>
+                  {%- endif -%}
+                  {%- if customer.default_address.zip != blank -%}
+                    <tr>
+                      <td>{{ 'customer.addresses.zip' | t }}:</td>
+                      <td>{{ customer.default_address.zip }}</td>
+                    </tr>
+                  {%- endif -%}
+                  {%- if customer.default_address.country != blank -%}
+                    <tr>
+                      <td>{{ 'customer.addresses.country' | t }}:</td>
+                      <td>{{ customer.default_address.country }}</td>
+                    </tr>
+                  {%- endif -%}
+                  {%- if customer.default_address.phone != blank -%}
+                    <tr>
+                      <td>{{ 'customer.addresses.phone' | t }}:</td>
+                      <td>{{ customer.default_address.phone }}</td>
+                    </tr>
+                  {%- endif -%}
+                </table>
+              </div>
+            {%- endif -%}
+            <p class="text-center">
+<!--               <a href="/account/addresses">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a> -->
+              <a class="btn col-5 col-lg-12 btn--full btn--secondary rounded" href="/account/addresses">ADD ADDRESS </a>
+            </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-js-tabs-tab>
+          <span data-js-tabs-btn-mobile>{{ 'customer.orders.tab' | t }} <i>{% render 'icon-theme-188' %}</i></span>
+          <div class="tabs__content rte overflow-hidden" data-js-tabs-content>
+            <h2 class="h4 mt-20 mb-30 text-center">{{ 'customer.orders.title' | t }}</h2>
+            {% paginate customer.orders by 20 %}
+              {%- if customer.orders.size != 0 -%}
+                {%- for order in customer.orders -%}
+                  <div class="d-lg-none">
+                    <div class="d-flex">
+                      <div>
+                        <h4>{{ 'customer.orders.order_number' | t }}</h4>
+                      </div>
+                      <div class="ml-auto">
+                        <a href="{{ order.customer_url }}" class="btn">{{ order.name }}</a>
+                      </div>
+                    </div>
+                    <div class="table-wrapper">
+                      <table class="table-account responsive-table {% if forloop.index0 > 0 %}mb-60{% else %}mb-30{% endif %}">
+                        <tr>
+                          <td>{{ 'customer.orders.date' | t }}</td>
+                          <td>{{ order.created_at | date: format: 'month_day_year' }}</td>
+                        </tr>
+                        <tr>
+                          <td>{{ 'customer.orders.payment_status' | t }}</td>
+                          <td>{{ order.financial_status_label }}</td>
+                        </tr>
+                        <tr>
+                          <td>{{ 'customer.orders.fulfillment_status' | t }}</td>
+                          <td>{{ order.fulfillment_status_label }}</td>
+                        </tr>
+                        <tr>
+                          <td>{{ 'customer.orders.total' | t }}</td>
+                          <td>{{ order.total_price | money }}</td>
+                        </tr>
+                      </table>
+                    </div>
+                  </div>
+                {%- endfor -%}
+                <div class="d-none d-lg-block">
+                  <div class="table-wrapper">
+                    <table class="table-account-history responsive-table mb-30">
+                      <thead>
+                      <tr class="responsive-table-row">
+                        <th>{{ 'customer.orders.order_number' | t }}</th>
+                        <th>{{ 'customer.orders.date' | t }}</th>
+                        <th>{{ 'customer.orders.payment_status' | t }}</th>
+                        <th>{{ 'customer.orders.fulfillment_status' | t }}</th>
+                        <th>{{ 'customer.orders.total' | t }}</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      {%- for order in customer.orders -%}
+                        <tr class="responsive-table-row">
+                          <td data-label="{{ 'customer.orders.order_number' | t }}">{{ order.name | link_to: order.customer_url }}</td>
+                          <td data-label="{{ 'customer.orders.date' | t }}">{{ order.created_at | date: format: 'month_day_year' }}</td>
+                          <td data-label="{{ 'customer.orders.payment_status' | t }}">{{ order.financial_status_label }}</td>
+                          <td data-label="{{ 'customer.orders.fulfillment_status' | t }}">{{ order.fulfillment_status_label }}</td>
+                          <td data-label="{{ 'customer.orders.total' | t }}">{{ order.total_price | money }}</td>
+                        </tr>
+                      {%- endfor -%}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              {%- else -%}
+                <p class="text-center">{{ 'customer.orders.none' | t }}</p>
+              {%- endif -%}
+              {%- if paginate.pages > 1 -%}
+                {% render 'pagination', paginate: paginate %}
+              {%- endif -%}
+            {% endpaginate %}
+          </div>
+        </div>
+      </div>
+      <script>
+        theme.AssetsLoader.onUserAction(function() {
+          theme.AssetsLoader.require('scripts', 'tabs');
+        });
+      </script>
+    </tabs-element>
+    <div class="d-flex d-lg-none justify-content-center justify-content-lg-end mt-60">
+      <a href="/account/logout" class="btn">{{ "general.popups.account.authorized.log_out" | t }}</a>
+    </div>
+  </div>
+</div>
+
+{{ 'woods-account.js' | asset_url | script_tag }}

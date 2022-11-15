@@ -1,0 +1,243 @@
+
+<section>
+    <div class="{{'woods-collection-row '}}">
+        
+        <div id="slider-container">
+          <div class="collection-title">
+                <a href="{{ section.settings.collection-slider.url }}"><h2 class="no-margin">{{section.settings.collection-slider.title}}</h2></a>
+                <div class="slider-controls">
+                    <div class="prev-slide slide-nav"><img src="{{ 'arrow-prev.svg' |asset_url }}" alt="carousel-previous-icon"></div>
+                    <div class="next-slide slide-nav"><img src="{{ 'arrow-next.svg'|asset_url }}" alt="carousel-previous-icon"></div>
+                </div>
+            </div>
+            <div id="lnw-product-list" class="owl-carousel lnw-collection-slider border-top-carousel">
+                {% for product in section.settings.collection-slider.products %}
+<product-item class="product-collection{% if settings.product_collection_centered_info %} product-collection--centered{% endif %} d-block"{% include 'product-get-attributes' %} data-qv-check-change>
+                    
+                       <div class="carousel-item border-padding">
+                        <a href="{{ product.url }}">
+                        <img class="img-responsive" src="{{ product.featured_image | image_url }}" alt="{{ product.title | escape }}" />
+                    </a>
+                        <div class="carousel-item-footer">
+                          <div class="product-info-container">
+                            <div class="product-title">{{product.title}}</div>
+                            <div class="product-price">{{product.price | money_with_currency}}</div>
+                          </div>
+                            <div class="product-subtitle">{{product.metafields.descriptors.subtitle}}</div>
+
+                            <button class="add2xartAjax" type="button" data-var-id="{{ product.variants.first.id }}">Add to cart</button>
+                          
+                        </div>
+                      </div>
+                  {% include 'product-get-button-cart' %}
+                  </product-item>
+              
+                  {% endfor %}
+              </div>
+        </div>
+    </div>
+  </section>
+  
+  
+  {% schema %}
+  {
+      "name": "Woods Collecion Slider",
+      "settings": [{
+          "id": "collection-slider",
+          "label": "collection",
+          "type": "collection"
+      }
+      
+      ],
+      "presets": [{
+          "name": "Woods Collection",
+          "category": "Woods "
+      }]
+  }
+  {% endschema %}
+  
+  {% stylesheet %}
+
+  #slider-container{
+    margin: 35px 0px;
+    overflow-x:hidden;
+    flex:3;
+    padding:0 10px; 
+  }
+    .no-margin{
+      margin:0px;
+    }
+  .img-responsive{
+    max-width: 100% !important;
+    width: 350px !important;
+    height:auto;
+    border-radius: 14px;
+  }
+    .border-top-carousel{
+      border-top: 0.1px solid rgb(232,232,232);
+    }
+    .border-padding{
+      border-right: 0.1px solid rgb(232,232,232);
+      padding: 10px 10px 0 0;
+    }
+  .lnw-collection-slider{
+    width:100vw;
+  }
+
+  .lnw-collection-row {
+    margin: 50px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+ /* the slides */
+ .slick-slide {
+    margin: 0 27px;
+}
+
+/* the parent */
+.slick-list {
+    margin: 0 -27px;
+}
+    
+
+.slider-controls {
+    display: flex;
+    justify-content: space-evenly;
+    flex-shrink: inherit;
+    border: 1px solid black;
+    border-radius: 5px;
+    align-self: flex-start;
+    margin: 0px 20px;
+  width:72px;
+  height:32px;
+  align-items:center;
+}
+    .slide-nav{
+      cursor:pointer;
+    }
+
+.slick-arrow {
+    cursor: pointer;
+    padding: 0px 5px;
+}
+
+
+  .carousel-item-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 12px;
+    gap:8px;
+}
+    
+
+.title-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content:space-between;
+
+  
+  
+}
+.collection-title {
+  margin-bottom: 15px;
+    font-weight: 900;
+    padding-bottom: 10px;
+  display: flex;
+    justify-content: space-between;
+}
+
+  .product-info-container{
+    display: flex;
+    justify-content: space-between;
+    }
+    .product-title {
+    font-style: normal;
+    font-size: 22px;
+    color: black;
+    }
+    .product-subtitle{
+    color: black;
+    font-size: 11px;
+      
+    }
+.lnw-collection-slider .owl-nav{
+
+    display:none;
+}
+    button.add2xartAjax {
+    background-color: #1C1A00;
+    color: white;
+    padding: 15px 0px;
+    border-radius: 8px;
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+      font-family:'Helvetica';
+}
+    
+
+    @media screen and (max-width:780px){
+      .slider-controls{
+        margin-bottom: 18px;
+      }
+      
+    }
+
+  {% endstylesheet %}
+  
+  {% javascript %}
+
+    var slider = $('.lnw-collection-slider' ).owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        autoWidth:true,
+      autoHeight: false,
+        responsive:{
+            0:{
+                items:2
+            },
+            475:{
+                items:2
+            },
+            1200:{
+                items:4
+            },
+            1600:{
+                items:6
+            }
+        }
+    });
+  
+    $('.prev-slide').click(function() {
+      console.log('prev')
+        slider.trigger('prev.owl.carousel');
+    })
+    $('.next-slide').click(function() {
+      console.log('next')
+        slider.trigger('next.owl.carousel', [300]);
+    })
+  
+  $('.add2xartAjax').click(function(){ 
+var ID = $(this).attr("data-var-id"); 
+console.log(ID);
+$.ajax({
+type: 'POST',
+url: '/cart/update.js',
+data: {
+  quantity: 1,
+  id: $(this).attr("data-var-id")
+},
+  dataType: 'json', 
+ success: function (data) { 
+  $('#CartCount span:first').text(data.quantity);
+  console.log(data.quantity);
+ 
+ } 
+ });
+}) 
+  {% endjavascript %}

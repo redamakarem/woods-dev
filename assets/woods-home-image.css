@@ -1,0 +1,182 @@
+.main-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.main-text{
+  font-size:5rem;
+  line-height: 76px;
+}
+.main-button{
+  margin-top: 40px;
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  border-style: none;
+  box-sizing: border-box;
+  width: 180px;
+  padding: 15px;
+  background: #FFFFFF;
+  border-radius: 8px;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+.main-text{
+  font-size:5rem;
+  line-height: 76px;
+}
+.home-img{
+  max-width:100% !important;
+  border-radius:20px;
+  
+}
+.mobile-img{
+  max-width:100% !important;
+  border-radius:20px;
+  display:none;
+}
+}
+ 
+/* For Tablet View */
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1023px) {
+.main-text{
+  font-size:52px;
+  line-height: 44px;
+}
+
+  .home-img{
+  max-width:100% !important;
+  border-radius:20px;
+    display:none;
+}
+.mobile-img{
+  max-width:100% !important;
+  border-radius:20px;
+  
+}
+}
+ 
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px)
+and (orientation: portrait) {
+.main-text{
+  font-size:52px;
+  line-height: 44px;
+}
+    .home-img{
+  max-width:100% !important;
+  border-radius:20px;
+    display:none;
+}
+.mobile-img{
+  max-width:100% !important;
+  border-radius:20px;
+
+}
+}
+ 
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 767px)
+and (orientation: landscape) {
+.main-text{
+  font-size:52px;
+  line-height: 44px;
+}
+    .home-img{
+  max-width:100% !important;
+  border-radius:20px;
+    display:none;
+}
+.mobile-img{
+  max-width:100% !important;
+  border-radius:20px;
+
+}
+}
+ 
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 767px) {
+.main-text{
+  font-size:52px;
+  line-height: 44px;
+}
+    .home-img{
+  max-width:100% !important;
+  border-radius:20px;
+    display:none;
+}
+.mobile-img{
+  max-width:100% !important;
+  border-radius:20px;
+
+}
+}
+ 
+/* For iPhone 4 Portrait or Landscape View */
+/* @media screen and (min-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+.main-text{
+  font-size:2rem;
+  line-height: 30px;
+}
+    .home-img{
+  max-width:95% !important;
+  border-radius:20px;
+    display:none;
+}
+.mobile-img{
+  max-width:95% !important;
+  border-radius:20px;
+
+}
+} */
+ 
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+.main-text{
+  font-size:52px;
+  line-height: 44px;
+}
+    .home-img{
+  max-width:100% !important;
+  border-radius:20px;
+    display:none;
+}
+.mobile-img{
+  max-width:100% !important;
+  border-radius:20px;
+
+}
+}
+ 
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px)
+and (-webkit-min-device-pixel-ratio: 3) {
+.main-text{
+  font-size:52px;
+  line-height: 44px;
+}
+    .home-img{
+  max-width:100% !important;
+  border-radius:20px;
+    display:none;
+}
+.mobile-img{
+  max-width:100% !important;
+  border-radius:20px;
+
+}
+}

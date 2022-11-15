@@ -1,0 +1,73 @@
+.text-container{
+   margin-top:130px;
+   margin-bottom:120px;
+}
+.txt-font-80 h2{
+   font-size: 80px;
+}
+.txt-font-24{
+   font-size: 24px;
+}
+
+.woods-text-section {
+    text-align: center;
+}
+
+.text-dark-j  p {
+    color: #1C1A00 !important;
+}
+
+.woods-text-section h2 {
+    font-family: 'Charter ITC Std';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 80px;
+    text-transform: uppercase;
+}
+
+.woods-text-content {
+    font-family: 'Helvetica';
+}
+.woods-text-content>p{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+}
+.woods-text-content-additional {
+    font-family: 'Charter ITC Std';
+    font-size: 18px;
+    line-height: 24px;
+}
+
+
+  a.woods-text-link {
+    display: inline-block;
+    padding: 18px 62px;
+    border: 1px solid;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 18px;
+
+}
+
+@media screen and (max-width: 768px) {
+  .woods-text-section h2 {
+    font-size: 52px;
+    line-height: 48px;
+  }
+  .woods-text-content>p{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+}
+  .woods-text-content-additional {
+    font-family: 'Charter ITC Std';
+    font-size: 16px;
+    line-height: 20px;
+}
+}

@@ -1,0 +1,24 @@
+.footer-right{
+  text-align:left;
+  font-family:var(--sans-serif-family);
+}
+.footer-right .col-lg{  
+  padding-left:0;
+  font-size:14px;
+}
+.footer-right .col-lg .py-5{
+  margin-bottom:16px;
+}
+.footer-right .social-media a{
+  text-align:center;
+}
+.footer-right .social-media a:hover .icon{
+  color:white;
+  fill:white;
+}
+.footer-subscribe input{
+  height:54px;
+  font-family:var(--sans-serif-family);
+  color: rgba(28, 26, 0, 0.4);
+  font-size:14px;
+}

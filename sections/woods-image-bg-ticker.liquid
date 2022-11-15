@@ -1,0 +1,130 @@
+{{ 'woods-image-bg-ticker.css' | asset_url | stylesheet_tag }}
+<section>
+<div class="main-container mx-md-20">
+   <img src="{{ section.settings.main-image | img_url:'master' }}" class="img-fluid home-img">
+   <img src="{{ section.settings.mobile-image | img_url:'master' }}" class="img-fluid mobile-img">
+   <div class="Toped">
+      <div class="row">
+        <div class="col align-self-center woods-text-section font-size-60 line-height-60 font-size-ls-32 line-height-ls-32">
+          {{ section.settings.main-title }} 
+        </div>
+      </div> 
+      <div class="row">
+        <div class="col align-self-center woods-text-section second-text font-size-16 font-size-ls-14 line-height-24 line-height-20">
+          {{ section.settings.second-text }} 
+        </div>
+      </div> 
+   </div>
+  <div class="bottom">
+     <div class="carouselTicker">
+          <ul class="carouselTicker__list liststyle">
+           {%- for block in section.blocks -%}
+                 <li class="carouselTicker__item">
+                     <div class='ticker-item-wrapper'>
+                       <img src="{{ block.settings.ticker-item-image | img_url }}" />
+                       <div class="ticker-item-text">{{ block.settings.ticker-item-text }}</div>
+                     </div>
+                 </li>
+            
+             {%- endfor -%}
+          </ul>
+           
+     </div>
+   </div>
+
+   
+  
+</div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Image Ticker",
+    "settings": [
+      {
+            "id": "blog-posts-slider",
+            "type": "text",
+            "label": "Add a blog posts slider"
+        },
+            {
+                "id": "main-image",
+                "label": "Main Image",
+                "type": "image_picker"
+               },
+              {
+                "id": "mobile-image",
+                "label": "Mobile Image",
+                "type": "image_picker"
+               },
+              {
+                "id": "main-title",
+                "label": "Title Content",
+                "type": "text"
+              },
+               {
+                "id": "second-text",
+                "label": "Description Text",
+                "type": "text"
+              }
+    ],
+    "presets": [
+        {
+            "name": "Image Ticker",
+            "category": "Carousels"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Ticker Item",
+            "type": "ticker-item",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "ticker-item-image",
+                    "label": "Ticker Item Image"
+                },
+              {
+                    "type": "text",
+                    "id": "ticker-item-text",
+                    "label": "Ticker Item Text"
+                }
+                
+            ]
+        }
+    ]
+    
+    
+  }
+{% endschema %}
+
+{% stylesheet %}
+ 
+{% endstylesheet %}
+
+{% javascript %}
+  var ticker =	$(".carouselTicker").carouselTicker({
+
+  // animation speed
+  speed: 1,
+
+  // animation delay
+  delay: 30,
+
+  // or 'next'
+  direction: "next",
+
+  // or 'vertical'
+  mode: "horizontal",
+
+  
+});
+  
+
+  
+  $(window).on('resize', function() {
+  $(".carouselTicker").carouselTicker().resizeTicker()
+});
+  
+
+{% endjavascript %}

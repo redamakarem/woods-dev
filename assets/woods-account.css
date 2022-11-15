@@ -1,0 +1,40 @@
+#account h1{
+    font-family: 'Charter ITC Std';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 40px;
+color: #1C1A00;
+}
+
+#account tabs-element.tabs {
+    display: flex;
+}
+
+
+#account tabs-element.tabs.tabs--init {
+    display: flex;
+}
+
+#account  .tabs__head {
+    display: flex;
+    flex-direction: column;
+}
+
+#account .tabs__slider {
+    flex-direction: column;
+}
+
+.tabs__body{
+    width: 100%;
+}
+.pb-52{
+  padding-bottom:52px;
+}
+
+.act-acc { text-decoration: underline; }
+
+.logout-acc{
+  font-size:15px;
+  color:red !important;
+}

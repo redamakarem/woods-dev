@@ -1,0 +1,8 @@
+
+<div class="panel-wood">
+{%- for sub_link in output_link.links -%}
+<a href="{% render 'header-get-menu-link-substitution' with preview_link_substitution: preview_link_substitution default_link: sub_link.url link: output_link sub_link: sub_link %}" class="d-flex align-items-center px-lg-5"><span>{{ sub_link.title }}</span>{% render 'header-get-menu-labels' with label_html: label_html link: output_link sub_link: sub_link %}{% if sub_link.levels > 0 %} <i class="ml-auto">{% render 'icon-theme-231' %}</i>{% endif %}{% render 'header-get-menu-preview-image' with preview_image_html: preview_image_html link: output_link sub_link: sub_link sub_sub_link: 'empty_lvl' %}</a>
+{%- endfor -%}
+
+</div>
+

@@ -1,0 +1,149 @@
+
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+ h1.woods-mask {
+        text-align:center;
+        text-transform:uppercase;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-top: 60px;
+        font-size: 90px;
+      line-height: 80px;
+      margin-bottom:56px;
+}
+
+}
+ 
+/* For Tablet View */
+@media screen and (min-device-width: 768px)
+and (max-device-width: 1024px) {
+   h1.woods-mask {
+        text-align:center;
+        text-transform:uppercase;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        margin-top: 60px;
+        font-size: 60px;
+      line-height: 50px;
+      margin-bottom:56px;
+}
+.image-size{
+  opacity: 1;
+  width: 850px !important;
+  height: 660px !important;
+  object-fit: contain;
+}
+}
+ 
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px)
+and (orientation: portrait) {
+ h1.woods-mask {
+        text-align:center;
+        text-transform:uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 32px;
+
+     font-size:40px;
+   line-height:40px;
+      
+}
+}
+ 
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px)
+and (orientation: landscape) {
+ h1.woods-mask {
+        text-align:center;
+        text-transform:uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 32px;
+
+     font-size:40px;
+   line-height:40px;
+      
+}
+}
+ 
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+ h1.woods-mask {
+        text-align:center;
+        text-transform:uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 32px;
+
+     font-size:40px;
+   line-height:40px;
+      
+}
+}
+ 
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (max-device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+ h1.woods-mask {
+        text-align:center;
+        text-transform:uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 32px;
+
+     font-size:40px;
+   line-height:40px;
+      
+}
+}
+ 
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px)
+and (-webkit-min-device-pixel-ratio: 2) {
+ h1.woods-mask {
+        text-align:center;
+        text-transform:uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 32px;
+
+     font-size:40px;
+   line-height:40px;
+      
+}
+}
+ 
+/* For iPhone 6 and 6 plus Portrait or Landscape View */
+@media (min-device-height: 667px) and (min-device-width: 375px)
+and (-webkit-min-device-pixel-ratio: 3) {
+ h1.woods-mask {
+        text-align:center;
+        text-transform:uppercase;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 32px;
+
+     font-size:40px;
+   line-height:40px;
+      
+}
+}
+.font-helvetica>builder-section>div>h2{
+  font-family:Helvetica;
+  font-size:20px;
+  font-weight:300;
+  line-height:28px;
+}
+.secrets-spacing>builder-section>div>h2{
+  margin-bottom:16px !important;
+}

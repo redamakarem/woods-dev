@@ -1,0 +1,128 @@
+{{ 'woods-collection-staggered.css' | asset_url | stylesheet_tag }}
+<section>
+    <div class="woods-collection-row">
+        <div id="slider-container">
+            <div id="woods-product-list" class="woods-collection-staggered">
+                <div class="first-row">
+                    <div class="staggered-title">
+                        <h5 class="subtitle-margin font-size-16 font-size-ls-14 line-height-24">{{section.settings.collection-subtitle}}</h5>
+                        <h1 class="title-style font-size-60 font-size-ls-32 line-height-60 line-height-ls-32">{{section.settings.collection-title}}</h1>
+                    </div>
+                    <div class="season-gap-items">
+                        <div class="item anchor-position">
+                            <img class="season-radius-img" src="{{ section.settings.product1.featured_image | image_url }}" alt="{{ product1.title | escape }}" />
+                          <div class="image__overlay_season">
+                            <div class="season-desc-style">
+                                <div class="product-title">{{section.settings.product1.title}}</div>
+                                <div class="product-price season-price-text">{{section.settings.product1.price | money_with_currency}}</div>
+                            </div>
+                                <div class="product-subtitle">{{section.settings.product1.metafields.descriptors.subtitle}}</div>
+                              <button class="discover-button-season" type="button">DISCOVER</button>
+                          </div>
+                          </div>
+                        <div class="item anchor-position">
+                            <img class="season-radius-img" src="{{ section.settings.product2.featured_image | image_url }}" alt="{{ product2.title | escape }}" />
+                          <div class="image__overlay_season">
+                            <div>
+                              {% for image in section.settings.product2.images limit:1 offset:1 %}
+                                <img src="{{ image | img_url: "medium" }}" />
+                                {% endfor %}
+                            </div>
+                            <div class="season-desc-style">
+                                <div class="product-title">{{section.settings.product2.title}}</div>
+                                <div class="product-price season-price-text">{{section.settings.product2.price | money_with_currency}}</div>
+                            </div>
+                                <div class="product-subtitle">{{section.settings.product2.metafields.descriptors.subtitle}}</div>
+                              <button class="discover-button-season" type="button">DISCOVER</button>
+                          </div>
+                          </div>
+                    </div>
+
+                  
+                    </div>
+                    <div class="second-row season-padding-row season-gap-items">
+                        <div class="item anchor-position h-100">
+                            <img class="season-radius-img" src="{{ section.settings.product3.featured_image | image_url }}" alt="{{ product3.title | escape }}" />
+                          <div class="image__overlay_season">
+                            <div class="season-desc-style">
+                                <div class="product-title">{{section.settings.product3.title}}</div>
+                                <div class="product-price season-price-text">{{section.settings.product3.price | money_with_currency}}</div>
+                            </div>
+                                <div class="product-subtitle">{{section.settings.product3.metafields.descriptors.subtitle}}</div>
+                              <button class="discover-button-season" type="button">DISCOVER</button>
+                          </div>
+                          </div>
+                        <div class="item anchor-position">
+                            <img class="season-radius-img" src="{{ section.settings.product4.featured_image | image_url }}" alt="{{ product4.title | escape }}" />
+                          <div class="image__overlay_season">
+                            <div class="season-desc-style">
+                                <div class="product-title">{{section.settings.product4.title}}</div>
+                                <div class="product-price season-price-text">{{section.settings.product4.price | money_with_currency}}</div>
+                            </div>
+                                <div class="product-subtitle">{{section.settings.product4.metafields.descriptors.subtitle}}</div>
+                              <button class="discover-button-season" type="button">DISCOVER</button>
+                          </div>
+                          </div>
+                        <div class="item"></div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </div>
+  </section>
+  
+  
+  {% schema %}
+  {
+      "name": "Woods Collecion Staggered",
+      "settings": [
+        
+        {
+          "id": "collection-title",
+          "label": "Title",
+          "type": "text"
+      },
+        {
+          "id": "collection-subtitle",
+          "label": "Subtitle",
+          "type": "text"
+      },
+      {
+          "id": "product1",
+          "label": "Product 1",
+          "type": "product"
+      },
+      {
+          "id": "product2",
+          "label": "Product 2",
+          "type": "product"
+      },
+      {
+          "id": "product3",
+          "label": "Product 3",
+          "type": "product"
+      },
+      {
+          "id": "product4",
+          "label": "Product 4",
+          "type": "product"
+      }
+      
+      ],
+      "presets": [{
+          "name": "Woods Collection Staggered",
+          "category": "Woods "
+      }]
+  }
+  {% endschema %}
+  
+  {% stylesheet %}
+    
+    
+  
+  {% endstylesheet %}
+  
+  {% javascript %}
+
+ 
+  {% endjavascript %}

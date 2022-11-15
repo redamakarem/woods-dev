@@ -1,0 +1,243 @@
+<div data-section-id="{{ section.id }}" data-section-type="contact-form">
+    <div class="container">
+        <div class="contact-form">
+            {%- if section.settings.title != blank -%}
+                <h1 class="text-center font-weight-normal mb-20 mb-md-15 contact-big-font font-size-80 line-height-80 font-size-ls-32 line-height-ls-32">{{ section.settings.title }}</h1>
+                  <h4 class="text-uppercase text-dark mb-20 mb-md-15 ft-helvetica">{{ section.settings.address }}</h4>
+                  <h4 class="text-uppercase text-dark mb-0 mb-md-5 ft-helvetica">{{ section.settings.email }}</h4>
+                  <h4 class="text-dark ft-helvetica details-margin mb-70 mb-md-100">{{ section.settings.phone }}</h4>
+            {%- endif -%}
+            <div class="row">
+                {%- if section.settings.show_info_column or section.settings.contact_map_code != blank -%}
+                    <div class="col-12 col-md-4 mb-30 ft-helvetica">
+                        {%- if section.settings.show_info_column -%}
+                            {%- if section.settings.page_content != blank -%}
+                                <div class="rte">
+                                    {% include 'parse-page-html-content' with default_page: 'include-contact-form' page_content: section.settings.page_content %}
+                                </div>
+                                {%- assign has_content = true -%}
+                            {%- elsif page.content -%}
+                                <div class="rte">
+                                    {% include 'parse-for-icons' content: page.content %}
+                                </div>
+                                {%- assign has_content = true -%}
+                            {%- endif -%}
+                        {%- endif -%}
+                        <div{% if has_content %} class="mt-30"{% endif %}>
+                            {%- if section.settings.contact_map_code != blank -%}
+                                <div class="contact-map position-relative">
+                                    {{ section.settings.contact_map_code }}
+                                </div>
+                            {%- endif -%}
+                        </div> 
+                    </div>
+                {%- endif -%}
+                <div class="col-12 col-md-9 mx-auto">
+                    <h1 class="font-weight-normal mb-10 font-size-80 line-height-80 font-size-ls-32 line-height-ls-32">{{ 'contact.form.title' | t }}</h1>
+                    <p class="fs-lg text-dark mb-25 mb-md-60 font-size-16 font-size-ls-14 line-height-24 line-height-ls-20 ft-helvetica">{{ 'contact.form.paragraph' | t }}</p>
+                    {% form 'contact' %}
+                        {%- if form.posted_successfully? -%}
+                            <p class="form-success">{{ 'contact.form.post_success' | t }}</p>
+                        {%- endif -%}
+                        {%- if section.settings.show_input_label -%}
+                            <label for="ContactFormName" class="label-required">{{ 'contact.form.name_title' | t }}</label>
+                        {%- endif -%}
+                      <div class="d-flex flex-column flex-md-row mb-md-30">
+                        <input type="text"
+                               class="bg-white ft-helvetica contact-input mb-10 mb-md-0"
+                               name="contact[name]"
+                               id="ContactFormName"
+                               placeholder="{{ 'contact.form.name_placeholder' | t }}"
+                               value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}"
+                               required="required">
+                        {%- if section.settings.show_input_label -%}
+                            <label for="ContactFormEmail" class="label-required">{{ 'contact.form.email_title' | t }}</label>
+                        {%- endif -%}
+                        <input type="email"
+                               class="ml-md-10 bg-white ft-helvetica contact-input mb-10 mb-md-0"
+                               name="contact[email]"
+                               id="ContactFormEmail"
+                               placeholder="{{ 'contact.form.email_placeholder' | t }}"
+                               value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                               spellcheck="false"
+                               autocomplete="off"
+                               autocapitalize="off"
+                               required="required">
+                      </div>
+                      <div class="d-flex flex-column flex-md-row mb-md-30">
+                        {%- if section.settings.show_input_label -%}
+                            <label for="ContactFormPhone">{{ 'contact.form.phone_title' | t }}</label>
+                        {%- endif -%}
+                        <input type="tel"
+                               class="form-control bg-white ft-helvetica contact-input mb-10 mb-md-0"
+                               name="contact[phone]"
+                               id="ContactFormPhone"
+                               placeholder="{{ 'contact.form.phone_placeholder' | t }}"
+                               value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+                               required="required">
+                        {%- if section.settings.show_input_label -%}
+                            <label for="ObjectFormProduct">Object</label>
+                        {%- endif -%}
+                        <input type="text"
+                               class="form-control ml-md-10 bg-white ft-helvetica contact-input mb-10 mb-md-0"
+                               name="contact[object]"
+                               id="ContactFormObject"
+                               placeholder="OBJECT"
+                               required="required">
+                        </div>
+                        {%- if section.settings.show_input_label -%}
+                            <label for="ContactFormMessage" class="label-required">{{ 'contact.form.message_title' | t }}</label>
+                        {%- endif -%}
+                        <textarea rows="8"
+                                  class="bg-white ft-helvetica contact-input mb-10 mb-md-0"
+                                  name="contact[body]"
+                                  id="ContactFormMessage"
+                                  placeholder="{{ 'contact.form.message_placeholder' | t }}"
+                                  required="required">
+                          {%- if form.body -%}
+                              {{ form.body }}
+                          {%- endif -%}
+                        </textarea>
+                        {% include 'form-get-message' %}
+                        <div class="mt-10 mt-md-30">
+                            <button type="submit" style="border-radius:8px;padding:16px;" class="w-75 weight-700 font-size-14 line-height-22 btn btn--full submit-contact ft-helvetica">{{ 'contact.form.send' | t }}</button>
+                        </div>
+                    {% endform %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% schema %}
+{
+    "name": "Contact form",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "title",
+            "label": "Title"
+        },{
+          "id": "address",
+          "label": "Address",
+          "type": "text"
+        },{
+          "id": "email",
+          "label": "Email",
+          "type": "text"
+        },{
+          "id": "phone",
+          "label": "Phone",
+          "type": "text"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_input_label",
+            "label": "Show input label",
+            "default": true
+        },
+        {
+            "type": "select",
+            "id": "button_type",
+            "label": "Button type",
+            "default": "default",
+            "options": [
+              {
+                "value": "default",
+                "label": "Default"
+              },
+              {
+                "value": "invert",
+                "label": "Invert"
+              }
+            ]
+        },
+        {
+            "type": "header",
+            "content": "Content"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_info_column",
+            "label": "Show info column",
+            "default": true
+        },
+        {
+            "type": "page",
+            "id": "page_content",
+            "label": "Page content",
+            "info": "Default page: 'parse-page-html-content'"
+        },
+        {
+            "type": "textarea",
+            "id": "contact_map_code",
+            "label": "Contact Map Code",
+            "default": "<iframe width=\"600\" height=\"450\" frameborder=\"0\" style=\"border:0\" src=\"https://www.google.com/maps/embed/v1/place?key=AIzaSyBwY_0PWuwH_A5y4iwNAqpaUbUjRPySkFc%0A%20%20%20%20&q=7563%20St.%20Vicent%20Place,%20Glasgow\" allowfullscreen=\"\"></iframe>"
+        },
+        {
+            "type": "header",
+            "content": "Video manual"
+        },
+        {
+            "type": "paragraph",
+            "content": "[Home sections](https:\/\/www.youtube.com\/watch?v=QQ6wFwBts4k&list=PLj-506KaR_vcQjwcpC6yII-1JY0bSj7df&index=9)"
+        },
+        {
+            "type": "header",
+            "content": "User manual"
+        },
+        {
+            "type": "paragraph",
+            "content": "[Contact Form](https:\/\/mpthemes.net\/shella-shopify-theme\/documentation-version4\/doc02-06-home-contact-form.php#contact-form)"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Contact form",
+            "category": "3) Static content"
+        }
+    ]
+}
+{% endschema %}
+
+  {% stylesheet %}
+    .contact-big-font{
+      letter-spacing: 0px;
+    }
+    .contact-input{
+      padding: 16px 14px!important;
+      border-radius: 8px;
+      font-size: 12px!important;
+      font-weight: 700!important;
+    }
+    .submit-contact{
+      background-color:black !important;
+      color:white !important;
+    }
+      @media screen and (min-width: 768px){
+        .details-margin{
+          margin-bottom:160px;
+        }
+      }
+    @media screen and (max-width: 768px) {
+    .contact-big-font {
+         font-size:32px !important;
+    }
+    }
+    
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+textarea,
+select {
+  background-color: white;
+  border: var(--input-bd);
+  color: black;
+}
+  {% endstylesheet %}

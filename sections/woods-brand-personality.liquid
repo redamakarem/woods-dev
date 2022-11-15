@@ -1,0 +1,54 @@
+{{ 'woods-brand-personality.css' | asset_url | stylesheet_tag }}
+{% assign col_elements_blocks = section.blocks | where: 'type', 'column-elements' %}
+<div class="woods-brand-personality">
+  <h2>{{ section.settings.brand-personality-title }}</h2>
+<div class="col-12 d-flex flex-wrap text-center-webkit p-0">
+  {% for block in col_elements_blocks %}
+      <div class="col-6 col-md-3 brand-border p-30">
+        <div class="woods-grid-image"><img src="{{ block.settings.column-image | img_url:'master'}}" /></div>
+        <div class="woods-grid-content text-left">{{ block.settings.column-content }} </div>
+      </div>
+  {% endfor %}
+</div>
+</div>
+    
+    {% schema %}
+      {
+            "name": "Woods Brand Personality",
+            "settings": [
+              {
+                "id": "brand-personality-title",
+                "type": "text",
+                "label": "Add a split scroll section"
+            }                   
+            ],
+            "presets": [{
+                "name": "Woods Brand Personality",
+                "category": "Woods "
+            }],
+            "blocks":[
+              {
+                "name": "Column Elements",
+                "type": "column-elements",
+                "settings":[
+                  {
+                    "type": "image_picker",
+                    "id": "column-image",
+                    "label": "Column Image"
+                  },
+                  {
+                    "type": "html",
+                    "id": "column-content",
+                    "label": "Column Content"
+                  }
+                ]
+              }
+            ]
+        }
+      {% endschema %}
+        {% stylesheet %} 
+    
+        {% endstylesheet %}
+
+
+

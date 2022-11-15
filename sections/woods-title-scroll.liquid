@@ -1,0 +1,135 @@
+{{ 'woods-title-scroll.css' | asset_url | stylesheet_tag }}
+
+<section>
+ <div class="d-flex mb-70 mb-md-100 legal-style">
+  
+  <div class="text-center wood-w-50 align-self-center legal-margin-phone d-none d-md-block">
+      <ol id="item-list" class="legal-list-style">  
+        <li class="pb-25 tab font-size-40 line-height-40 act" ><a href="#privacy" class="act">Privacy Policy</a> </li>
+        <li class="pb-25 tab font-size-40 line-height-40 not-active"><a href="#terms">Terms and Conditions</a></li> 
+        <li class="pb-25 tab font-size-40 line-height-40 not-active"><a href="#returns">Returns & Exchanges</a></li>
+        <li class="pb-25 tab font-size-40 line-height-40 not-active"><a href="#shipping">Shipping</a></li>
+      </ol>
+    </div>
+  
+     <div id="content" class="legal-scroll-text wood-w-50">
+       
+		<div class="section ft-helvetica legal-margin-spacing" id="privacy" >
+          <h2 class="d-md-none text-dark font-size-24 text-underline">1. Privacy Policy </h1>          
+        	 {{ section.settings.privacy }}           
+		</div>
+		
+        <div class="section ft-helvetica" id="terms" >
+            <h2 class="d-md-none text-dark font-size-24 text-underline">2. Terms and Conditions </h1>
+        	 {{ section.settings.terms }}
+		</div>
+
+       	<div class="section ft-helvetica" id="returns" >
+            <h2 class="d-md-none text-dark font-size-24 text-underline">3. Returns & Exchanges </h1>
+        	 {{ section.settings.returns }}
+		</div>
+
+       	<div class="section ft-helvetica" id="shipping" >
+            <h2 class="d-md-none text-dark font-size-24 text-underline">4. Shipping </h1>
+        	 {{ section.settings.shipping }}
+		</div>
+		
+	</div>
+     
+ </div>
+
+</section>
+{% schema %}
+  {
+    "name": "Woods Title Scroll",
+    "settings": [
+      {
+          "id": "privacy",
+          "label": "Privacy",
+          "type": "richtext"
+    },{
+          "id": "terms",
+          "label": "Terms",
+          "type": "richtext"
+    },{
+          "id": "returns",
+          "label": "Returns",
+          "type": "richtext"
+    },{
+          "id": "shipping",
+          "label": "Shipping",
+          "type": "richtext"
+    }
+    ],
+      "presets": [{
+          "name": "Woods Title Scroll",
+          "category": "Woods "
+      }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+
+{% endstylesheet %}
+
+{% javascript %}
+
+  var oldActive 
+jQuery(function( $ ){
+	/**
+	 * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+	 * @see http://demos.flesler.com/jquery/scrollTo/
+	 * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.localScroll.
+	 */
+	
+	// The default axis is 'y', but in this demo, I want to scroll both
+	// You can modify any default like this
+	$.localScroll.defaults.axis = 'y';
+	
+	/**
+	 * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+	 * also affect the >> and << links. I want every link in the page to scroll.
+	 */
+  oldActive = $('ol#item-list li:first')[0]
+	$.localScroll({
+		target: '#content', // could be a selector or a jQuery object too.
+		queue:true,
+		duration:700,
+		hash:true,
+		onBefore:function( e, anchor, $target ){
+          if(e != 0){
+			// The 'this' is the settings object, can be modified
+          if(oldActive)
+          {
+           oldActive.classList.remove('act');
+           oldActive.classList.add('not-active');
+           oldActive.firstChild.classList.remove('act');
+           oldActive.firstChild.classList.add('not-active');
+          }
+          else
+          {
+            oldActive = $('ol#item-list li:first')[0]
+           oldActive.classList.remove('not-active');
+            oldActive.classList.add('act');
+          }
+          
+          if(e.currentTarget){
+            e.currentTarget.parentElement.classList.add('act');
+            e.currentTarget.parentElement.classList.remove('not-active');
+            e.currentTarget.classList.add('act');
+            e.currentTarget.classList.remove('not-active');
+            oldActive =  e.currentTarget.parentElement;
+            }
+         
+           }
+		},
+		onAfter:function( anchor, settings ){
+       
+			// The 'this' contains the scrolled element (#content)
+        
+        
+		}
+	});
+});
+  
+{% endjavascript %}

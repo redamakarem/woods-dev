@@ -1,0 +1,55 @@
+.stockist-search-button ,.stockist-result-addr-1 ,.stockist-result-addr-2,.stockist-result-details,.stockist-result-email,.stockist-result-website,.stockist-result-notes,.stockist-result-distance{
+  display:none !important;
+}
+.stockist-query-entry{
+  width:100%;
+}
+.stockist-search-field{
+  border-radius:8px;
+  height:54px !important;
+}
+.stockist-search-field::placeholder {
+    color: black !important;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.stockist-result{
+  border:0px !important;
+}
+.stockist-result-name,.stockist-result-address,.stockist-result-custom-fields{
+  padding:0px !important;
+}
+.stockist-result-address{
+  display:flex;
+  gap:20px;
+  color:black;
+}
+.stockist-result-name,.stockist-result-address,.stockist-result-custom-fields{
+  font-family:Helvetica;
+}
+.stockist-result-name{
+  font-size:16px;
+  line-height:20px;
+  text-transform: uppercase;
+  margin-bottom:16px !important;
+}
+.stockist-result-address{
+  font-size:14px;
+  line-height:20px;
+  font-weight:300;
+}
+.stockist-result-custom-field{
+  font-size:12px;
+  line-height:18px;
+}
+.stockist-result-custom-fields{
+  margin-top:4px !important;
+}
+
+@media screen and (max-width:768px){
+
+.stockist-result-list{
+  height:auto !important;
+}
+  
+}

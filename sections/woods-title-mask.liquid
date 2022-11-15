@@ -1,0 +1,35 @@
+{{ 'woods-title-mask.css' | asset_url | stylesheet_tag }}
+<h1 class="woods-mask" style="background-image:url('{{ section.settings.mask-image | img_url:'master' }}'); background-size: cover;background-position: center center;">{{ section.settings.mask-title }}</h1>
+    
+    {% schema %} 
+    
+        {
+            "name": "Woods Title Mask",
+            "settings": [
+              
+              {
+                "id": "mask-title",
+                "label": "Text Content",
+                "type": "text"
+            },
+              {
+                "id": "mask-image",
+                "label": "Mask Image",
+                "type": "image_picker"
+            }             
+            
+            ],
+            "presets": [{
+                "name": "Woods Title Mask",
+                "category": "Woods "
+            }]
+        }
+    
+        {% endschema %}
+    
+        {% stylesheet %} 
+
+    
+    
+        
+        {% endstylesheet %}

@@ -1,0 +1,32 @@
+.product-cart__remove>i>svg{
+  width:30px;
+}
+.bag-title-height{
+  height:20px;
+}
+.product-cart__image>a>div>img{
+ border-radius:10px; 
+}
+.popup-cart__subtotal>p{
+  font-size:13px;
+  color:#1C1A0080;
+}
+@media screen and (min-width:768px){
+      .bag-spacing{
+           width: 420px;
+      }
+      .cart-margin-res{
+          margin-top: 28px;
+          margin-bottom: 36px;
+      }
+    }
+
+@media screen and (max-width:767px){
+      .bag-spacing{
+           width: 335px;
+      }
+      .cart-margin-res{
+          margin-top: 12px;
+          margin-bottom: 60px;
+      }
+    }

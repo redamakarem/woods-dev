@@ -1,0 +1,51 @@
+<div class="wrapper {{section.settings.layout}}">
+<div class="woods-image" style="background-image:url('{{ section.settings.image-section | img_url:'master' }}'); background-size: cover;background-position: center center;"></div>
+<div class="woods-text">{{ section.settings.text-section }}</div>
+</div>
+
+{% schema %} 
+
+    {
+        "name": "Woods Image With Text",
+        "settings": [
+          
+          {
+            "id": "text-section",
+            "label": "Text Content",
+            "type": "html"
+        },
+          {
+            "id": "image-section",
+            "label": "Image",
+            "type": "image_picker"
+        },
+        {
+            "type": "select",
+            "id": "layout",
+            "label": "Layout",
+            "options": [
+              {
+                "value": "row-normal",
+                "label": "Image on the left"
+              },
+              {
+                "value": "row-reverse",
+                "label": "Image on the right"
+              }
+            ],
+            "default": "row-normal"
+          }
+          
+        
+        ],
+        "presets": [{
+            "name": "Woods Image With Text",
+            "category": "Woods "
+        }]
+    }
+
+    {% endschema %}
+
+    {% stylesheet %} 
+
+    {% endstylesheet %}

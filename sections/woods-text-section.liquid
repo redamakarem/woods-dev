@@ -1,0 +1,87 @@
+{{ 'woods-text-section.css' | asset_url | stylesheet_tag }}
+
+
+<div class="container text-container">
+  <div class="row">
+    <div class="col align-self-center woods-text-section">
+      <h2>{{ section.settings.woods-content-heading }}</h2>
+    </div>
+  </div>
+  <div class="row">
+       <div class="col">
+        </div>
+    <div class="col-10 align-self-center woods-text-content text-dark-j">
+      {{ section.settings.woods-content-body }}
+    </div>
+       <div class="col">
+        </div>
+  </div>
+
+  <div class="row">
+    <div class="col align-self-center woods-text-content-additional text-dark-j mb-30">
+      {{ section.settings.woods-content-additional }}
+    </div>
+  </div>
+  
+  <div class="row">
+  <div class="col align-self-center">
+      <a class="woods-text-link" href="{{ section.settings.woods-content-url }}">{{ section.settings.woods-content-link-text }}</a>
+    </div>
+    
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Woods Text Section",
+    "settings": [
+      {
+            "id": "woods-content-heading",
+            "type": "text",
+            "label": "Content heading"
+        },
+      {
+            "id": "woods-content-body",
+            "type": "richtext",
+            "label": "Content Body"
+        },
+          {
+            "id": "woods-content-additional",
+            "type": "richtext",
+            "label": "additional-content"
+        },
+      {
+            "id": "woods-content-link-text",
+            "type": "text",
+            "label": "Link text"
+        },
+      {
+            "id": "woods-content-url",
+            "type": "url",
+            "label": "Link URL"
+        }
+      
+    ],
+    "presets": [
+        {
+            "name": "Woods Text Section",
+            "category": "Woods"
+        }
+    ]
+      
+    
+  }
+{% endschema %}
+
+{% stylesheet %}
+    @font-face {
+    font-family: "helvl";
+    src: url({{ "helv-light.woff" | asset_url }});
+    }
+{% endstylesheet %}
+
+{% javascript %}
+  	
+
+{% endjavascript %}

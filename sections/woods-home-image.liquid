@@ -1,0 +1,65 @@
+{{ 'woods-home-image.css' | asset_url | stylesheet_tag }}
+
+<section>
+<div class="main-container mx-10 mx-md-30">
+   <img src="{{ section.settings.main-image | img_url:'master' }}" class="img-fluid home-img">
+   <img src="{{ section.settings.mobile-image | img_url:'master' }}" class="img-fluid mobile-img">
+   <div class="centered container">
+      <div class="row">
+        <div class="col align-self-center woods-text-section main-text">
+          {{ section.settings.main-title }} 
+        </div>
+      </div>
+      <div class="row">
+         <div class="col align-self-center woods-text-section">
+           <a href="{{ section.settings.link-1 }}" class="main-button" >
+            {{ section.settings.button-text }} 
+           </a>
+          </div>
+      </div>
+   </div>
+</div>
+</section>
+
+{% schema %}
+  {
+    "name": "Woods Home Image",
+    "settings": [
+               {
+                "id": "main-image",
+                "label": "Main Image",
+                "type": "image_picker"
+               },
+              {
+                "id": "mobile-image",
+                "label": "Mobile Image",
+                "type": "image_picker"
+               },
+              {
+                "id": "main-title",
+                "label": "Title Content",
+                "type": "text"
+              },
+               {
+                "id": "button-text",
+                "label": "Button Text",
+                "type": "text"
+              } ,{
+                  "type": "url",
+                  "id": "link-1",
+                  "label": "button-link"
+               }
+      
+    ],
+       "presets": [{
+          "name": "Woods Home Image",
+          "category": "Woods "
+      }]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

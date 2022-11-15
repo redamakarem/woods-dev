@@ -1574,6 +1574,12 @@
           "arrows": true,
           "bullets": true
         }
+      },
+      "60071e5b-4adb-47f8-9904-543dd04ff03d": {
+        "type": "woods-collection-carousel",
+        "settings": {
+          "collection-slider": "best-sellers"
+        }
       }
     },
     "content_for_index": [
@@ -1593,7 +1599,8 @@
       "b12bf036-7e46-4187-952e-62798617235a",
       "1f64f538-7777-4076-89eb-7ee41c0b8591",
       "instastory-786",
-      "c5e4d755-90e1-4e46-ad1d-599e41ff5fa1"
+      "c5e4d755-90e1-4e46-ad1d-599e41ff5fa1",
+      "60071e5b-4adb-47f8-9904-543dd04ff03d"
     ]
   }
 }

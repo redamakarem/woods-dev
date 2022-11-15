@@ -1548,38 +1548,6 @@
           "show_separator": false,
           "title": ""
         }
-      },
-      "c5e4d755-90e1-4e46-ad1d-599e41ff5fa1": {
-        "type": "woods-carousel-products",
-        "blocks": {
-          "515f7c63-293e-4c9f-83f6-f088131a63ba": {
-            "type": "collection",
-            "settings": {
-              "title": "",
-              "collection": "best-sellers"
-            }
-          }
-        },
-        "block_order": [
-          "515f7c63-293e-4c9f-83f6-f088131a63ba"
-        ],
-        "settings": {
-          "show_title": true,
-          "container": "boxed",
-          "size_of_columns": "4",
-          "max_count": 6,
-          "autoplay": true,
-          "speed": 5,
-          "infinite": true,
-          "arrows": true,
-          "bullets": true
-        }
-      },
-      "60071e5b-4adb-47f8-9904-543dd04ff03d": {
-        "type": "woods-collection-carousel",
-        "settings": {
-          "collection-slider": "best-sellers"
-        }
       }
     },
     "content_for_index": [
@@ -1598,9 +1566,7 @@
       "912c8f35-51a9-4634-8e98-1fcca1026a8d",
       "b12bf036-7e46-4187-952e-62798617235a",
       "1f64f538-7777-4076-89eb-7ee41c0b8591",
-      "instastory-786",
-      "c5e4d755-90e1-4e46-ad1d-599e41ff5fa1",
-      "60071e5b-4adb-47f8-9904-543dd04ff03d"
+      "instastory-786"
     ]
   }
 }

@@ -227,27 +227,36 @@
                                 </div>
                             {%- endif -%}
                             {%- if show_button_add_to_wishlist or show_button_add_to_compare or show_button_quick_view -%}
-                                <div class="product-collection__buttons-section d-flex{% if show_button_add_to_wishlist != true and show_button_add_to_compare != true %} d-lg-none{% endif %}{% if show_button_add_to_cart %} px-lg-10{% endif %}">
-                                    {%- if show_button_add_to_wishlist -%}
-                                        <div class="product-collection__button-add-to-wishlist mb-10">
-                                            {%- if settings.wishlist_type == 'default' -%}
-                                                {% include 'product-get-button-wishlist' %}
-                                            {%- elsif settings.wishlist_type == 'growave' and settings.app_growave_enable == true -%}
-                                                {% capture the_snippet_fave_icon %}{% render 'ssw-widget-faveicon' with product.id %}{% endcapture %}
-                                                {%- unless the_snippet_fave_icon contains 'Liquid error' -%}
-                                                    {{ the_snippet_fave_icon }}
-                                                {%- endunless -%}
+                                <div id="stuff" class="product-collection__buttons flex-column flex-lg-row align-items-lg-center flex-wrap{% if show_button_add_to_cart %} mt-5 mt-lg-10{% endif %}">
+                                    {%- if show_button_add_to_cart -%}
+                                        <div class="product-collection__button-add-to-cart w-100 mb-10">
+                                            {% include 'product-get-button-cart' %}
+                                        </div>
+                                    {%- endif -%}
+                                    {%- if show_button_add_to_wishlist or show_button_add_to_compare or show_button_quick_view -%}
+                                        <div class="product-collection__buttons-section d-flex{% if show_button_add_to_wishlist != true and show_button_add_to_compare != true %} d-lg-none{% endif %}{% if show_button_add_to_cart %} px-lg-10{% endif %}">
+                                            {%- if show_button_add_to_wishlist -%}
+                                                <div class="product-collection__button-add-to-wishlist mb-10">
+                                                    {%- if settings.wishlist_type == 'default' -%}
+                                                        {% include 'product-get-button-wishlist' %}
+                                                    {%- elsif settings.wishlist_type == 'growave' and settings.app_growave_enable == true -%}
+                                                        {% capture the_snippet_fave_icon %}{% render 'ssw-widget-faveicon' with product.id %}{% endcapture %}
+                                                        {%- unless the_snippet_fave_icon contains 'Liquid error' -%}
+                                                            {{ the_snippet_fave_icon }}
+                                                        {%- endunless -%}
+                                                    {%- endif -%}
+                                                </div>
                                             {%- endif -%}
-                                        </div>
-                                    {%- endif -%}
-                                    {%- if show_button_add_to_compare -%}
-                                        <div class="product-collection__button-add-to-compare mb-10">
-                                            {% include 'product-get-button-compare' %}
-                                        </div>
-                                    {%- endif -%}
-                                    {%- if show_button_quick_view -%}
-                                        <div class="product-collection__button-quick-view-mobile d-lg-none mb-10">
-                                            {% render 'product-get-button-quick-view' with type: 'btn-text' product_enable_tooltips: product_enable_tooltips %}
+                                            {%- if show_button_add_to_compare -%}
+                                                <div class="product-collection__button-add-to-compare mb-10">
+                                                    {% include 'product-get-button-compare' %}
+                                                </div>
+                                            {%- endif -%}
+                                            {%- if show_button_quick_view -%}
+                                                <div class="product-collection__button-quick-view-mobile d-lg-none mb-10">
+                                                    {% render 'product-get-button-quick-view' with type: 'btn-text' product_enable_tooltips: product_enable_tooltips %}
+                                                </div>
+                                            {%- endif -%}
                                         </div>
                                     {%- endif -%}
                                 </div>

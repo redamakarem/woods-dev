@@ -195,9 +195,9 @@
                     </div>
                 {%- endif -%}
                 {%- if show_price -%}
-                    <div class="product-collection__price mb-{% if product_collection_content_offsets == 1 %}10{% else %}20{% endif %}">
+                    {%- comment -%} <div class="product-collection__price mb-{% if product_collection_content_offsets == 1 %}10{% else %}20{% endif %}">
                         {% include 'product-get-price' %}
-                    </div>
+                    </div> {%- endcomment -%}
                 {%- endif -%}
                 <div class="product-collection__control d-flex flex-column w-100">
                     {%- if show_options and show_custom_options -%}

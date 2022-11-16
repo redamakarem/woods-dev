@@ -1322,11 +1322,6 @@
           "blog-posts-slider": "test"
         }
       },
-      "16648747535805bf36": {
-        "type": "woods-collection-carousel-hover",
-        "settings": {
-        }
-      },
       "912c8f35-51a9-4634-8e98-1fcca1026a8d": {
         "type": "home-builder",
         "blocks": {
@@ -1550,6 +1545,12 @@
           "feed_width": 100,
           "html_area": ""
         }
+      },
+      "0df24bf0-aed2-41c4-a104-5c22188d24e8": {
+        "type": "woods-collection-carousel-hover",
+        "settings": {
+          "discover-slider": "wood"
+        }
       }
     },
     "content_for_index": [
@@ -1558,8 +1559,8 @@
       "1664807300be5b3253",
       "1664712417732c9dab",
       "4a24f3b8-be4f-4de9-83da-6fe1e4b445c0",
-      "16648747535805bf36",
       "64551e8e-5ee9-44ac-b9ab-019bad470762",
+      "0df24bf0-aed2-41c4-a104-5c22188d24e8",
       "1ff32999-995b-40bf-9fea-5e332e41078b",
       "1664720817f4221026",
       "13f83548-3114-430f-b90b-e93a98160701",

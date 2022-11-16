@@ -1,7 +1,10 @@
 
 <section>
     <div class="discover-container">
-      <div>lala</div>
+      <div class="slider-controls">
+        <div class="prev-slide slide-nav"><img src="{{ 'arrow-prev.svg' |asset_url }}" alt="carousel-previous-icon"></div>
+        <div class="next-slide slide-nav"><img src="{{ 'arrow-next.svg'|asset_url }}" alt="carousel-previous-icon"></div>
+    </div>
       <div class="owl-carousel discover-slider">
         {% for product in section.settings.discover-slider.products %}
           <a href="{{ product.url }}">
@@ -59,7 +62,7 @@
   {% endstylesheet %}
   
   {% javascript %}
-    $('.discover-slider').owlCarousel({
+    var discover_slider = $('.discover-slider').owlCarousel({
     loop:true,
     margin:10,
     nav:true,
@@ -74,6 +77,15 @@
         }
     }
 });
+
+$('.discover-container .prev-slide').click(function() {
+      console.log('prev')
+        discover_slider.trigger('prev.owl.carousel');
+    })
+    $('.discover-container .next-slide').click(function() {
+      console.log('next')
+        discover_slider.trigger('next.owl.carousel', [300]);
+    })
 
 $(document).ready(function() {
   $('.hover-content').hide();

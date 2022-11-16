@@ -13,7 +13,7 @@
                  </div>
             <div id="lnw-product-list" class="owl-carousel lnw-collection-slider-hover">
                 {% for product in section.settings.collection-slider-hover.products %}
-                      <div class="carousel-item container border-item">
+                      <div class="carousel-item">
                         <a class="anchor-position" href="{{ product.url }}">
                         <img class="img-responsive-hover image-size" src="{{ product.featured_image | image_url }}" alt="{{ product.title | escape }}" />
                           

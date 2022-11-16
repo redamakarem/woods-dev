@@ -78,9 +78,9 @@
 $(document).ready(function() {
   $('.hover-content').hide();
     $('.discover-slider .carousel-item').hover(function() {
-        $(this).find('.hover-content').show(500)
+        $(this).find('.hover-content').fadeIn()
     }, function() {
-        $(this).find('.hover-content').hide(500);
+        $(this).find('.hover-content').fadeOut();
     });
 });
    

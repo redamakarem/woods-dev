@@ -1545,6 +1545,12 @@
           "feed_width": 100,
           "html_area": ""
         }
+      },
+      "0df24bf0-aed2-41c4-a104-5c22188d24e8": {
+        "type": "woods-collection-carousel-hover",
+        "settings": {
+          "discover-slider": "wood"
+        }
       }
     },
     "content_for_index": [
@@ -1562,7 +1568,8 @@
       "912c8f35-51a9-4634-8e98-1fcca1026a8d",
       "b12bf036-7e46-4187-952e-62798617235a",
       "1f64f538-7777-4076-89eb-7ee41c0b8591",
-      "de26a4a2-0ab4-4a5c-880c-ac6114068859"
+      "de26a4a2-0ab4-4a5c-880c-ac6114068859",
+      "0df24bf0-aed2-41c4-a104-5c22188d24e8"
     ]
   }
 }

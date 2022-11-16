@@ -76,10 +76,11 @@
 });
 
 $(document).ready(function() {
+  $('.hover-content').hide();
     $('.discover-slider carousel-item').hover(function() {
-        $(this).find('.hover-content').hide()
+        $(this).find('.hover-content').show()
     }, function() {
-        $(this).find('.hover-content').show();
+        $(this).find('.hover-content').hide();
     });
 });
    

@@ -4,9 +4,6 @@
     <div class="{{'woods-collection-row '}}">
         
         <div id="slider-container" class="p-0">
-          
-          <div class="collection-title">
-            </div>
           <div class="anchor-position">            
                 <div class="slider-controls-hover arrows-position-right">
                     <div class="prev-slide-hover slide-nav"><img src="{{ 'arrow-prev.svg' |asset_url }}" alt="carousel-previous-icon"></div>
@@ -15,22 +12,17 @@
                      <div class="next-slide-hover slide-nav"><img src="{{ 'arrow-next.svg'|asset_url }}" alt="carousel-previous-icon"></div>
                  </div>
             <div id="lnw-product-list" class="owl-carousel lnw-collection-slider-hover">
-              
                 {% for product in section.settings.collection-slider-hover.products %}
                       <div class="carousel-item container border-item">
                         <a class="anchor-position" href="{{ product.url }}">
                         <img class="img-responsive-hover image-size" src="{{ product.featured_image | image_url }}" alt="{{ product.title | escape }}" />
                           
-<!--                           <div class="centered">
-                          <h1 class="text-white">DISCOVER THE WOOD COLLECTION </h1>
-                          <button class="discover-button" type="button">DISCOVER</button>
-                          </div> -->
+
                     </a>
       
                         <div class="carousel-item-footer">
                           <div class="product-info-container">
-<!--                             <div class="product-title">{{product.title}}</div> -->
-<!--                             <div class="product-price">{{product.price | money_with_currency}}</div> -->
+
                           </div>
                         </div>
                       </div>

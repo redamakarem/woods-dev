@@ -5,9 +5,7 @@
         {% for product in section.settings.discover-slider.products %}
           <a href="{{ product.url }}">
             <div class="carousel-item" >
-              
               <img src="{{ product.featured_image | image_url }}" alt="{{ product.title | escape }}" style="height: calc(100% - 60px);" />
-             
             </div>
         </a>
         {% endfor %}
@@ -65,12 +63,12 @@
         }
     });
   
-    $('.prev-slide-hover').click(function() {
-      console.log('prev')
-        slider_hover.trigger('prev.owl.carousel');
-    })
-    $('.next-slide-hover').click(function() {
-      console.log('next')
-        slider_hover.trigger('next.owl.carousel', [100]);
-    })
+    // $('.prev-slide-hover').click(function() {
+    //   console.log('prev')
+    //     slider_hover.trigger('prev.owl.carousel');
+    // })
+    // $('.next-slide-hover').click(function() {
+    //   console.log('next')
+    //     slider_hover.trigger('next.owl.carousel', [100]);
+    // })
   {% endjavascript %}

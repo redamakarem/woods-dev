@@ -14,7 +14,7 @@
             <div id="lnw-product-list" class="owl-carousel lnw-collection-slider-hover">
                 {% for product in section.settings.collection-slider-hover.products %}
                       <div class="carousel-item">
-                        <div class="img-bg" style="background-image:url('{{ product.featured_image | image_url }}');min-height: 300px;"></div>
+                        <img src="{{ product.featured_image | image_url }}" alt="">
                       </div>
                   {% endfor %}
               </div>

@@ -2,7 +2,7 @@
 <section>
     <div class="discover-container">
       <div>lala</div>
-      <div class="discover-slider">
+      <div class="owl-carousel discover-slider">
         {% for product in section.settings.discover-slider.products %}
           <a href="{{ product.url }}">
             <div class="carousel-item" >
@@ -41,6 +41,21 @@
   {% endstylesheet %}
   
   {% javascript %}
-
+    $('.discover-slider').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+})
    
   {% endjavascript %}

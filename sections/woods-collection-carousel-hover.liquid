@@ -11,7 +11,7 @@
             <div class="carousel-item" >
               <img src="{{ product.featured_image | image_url }}" alt="{{ product.title | escape }}" style="height: calc(100% - 60px);" />
               <div class="hover-content">
-                Discover the woods collection
+                {{ section.settings.discover-hover-text }}
               </div>
             </div>
         </a>
@@ -27,10 +27,23 @@
   {% schema %}
   {
       "name": "Collecion Slider Hover",
-      "settings": [{
+      "settings": [
+        {
           "id": "discover-slider",
           "label": "collection",
           "type": "collection"
+      },
+      {
+          "id": "discover-title",
+          "label": "Section Title",
+          "type": "text",
+          "default": "The woods collection"
+      },
+      {
+          "id": "discover-hover-text",
+          "label": "Hover Text",
+          "type": "text",
+          "default": "Discover the woods collection"
       }
       
       ],

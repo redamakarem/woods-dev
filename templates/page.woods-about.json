@@ -136,6 +136,7 @@
         "13e53aa7-b99b-43f2-9ae8-98fdeefbd228": {
           "type": "ticker-item",
           "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/white-ticker-icon.png",
             "ticker-item-text": "WILD"
           }
         },

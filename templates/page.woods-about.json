@@ -150,19 +150,29 @@
         "24fd657f-0911-4060-b6f5-f4207263c5c5": {
           "type": "ticker-item",
           "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/white-ticker-icon.png",
             "ticker-item-text": "NATURE"
           }
         },
         "8b2d3820-7213-434e-881c-5516335b668c": {
           "type": "ticker-item",
           "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/white-ticker-icon.png",
             "ticker-item-text": "PARADISE"
           }
         },
         "55a326de-800a-4416-8ff1-52ccd19dbf62": {
           "type": "ticker-item",
           "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/white-ticker-icon.png",
             "ticker-item-text": "SECRET"
+          }
+        },
+        "5487b500-705b-440e-be8a-e07c06a2a8bc": {
+          "type": "ticker-item",
+          "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/white-ticker-icon.png",
+            "ticker-item-text": "Test"
           }
         }
       },
@@ -173,7 +183,8 @@
         "6af2d2c8-288c-4908-83a7-56cb3b17ae3b",
         "24fd657f-0911-4060-b6f5-f4207263c5c5",
         "8b2d3820-7213-434e-881c-5516335b668c",
-        "55a326de-800a-4416-8ff1-52ccd19dbf62"
+        "55a326de-800a-4416-8ff1-52ccd19dbf62",
+        "5487b500-705b-440e-be8a-e07c06a2a8bc"
       ],
       "settings": {
         "blog-posts-slider": "asd asd asd",

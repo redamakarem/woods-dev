@@ -249,6 +249,7 @@
       "type": "image-with-text",
       "settings": {
         "text-section": "<h2 class=\"font-size-60 line-height-60 font-size-ls-32 line-height-ls-32 m-0\">Paradise<\/h2>\n\n<p class=\"font-size-20 font-size-ls-18 line-height-28 line-height-ls-24\">\nOn the hills near <strong><i class=\"font-weight-bold\">Siena, Italy<\/i> <\/strong>, hides a farm in a small patch of land between the shades of an oak forest. After being abandoned for 60 years, the farm now hosts a Perfumer Garden with wild and cultivated flora dedicated to the art of perfume. The farm is every perfumer’s dream garden with its ancient and new cultivars, and its own distilleries.\n<\/p>",
+        "image-section": "shopify:\/\/shop_images\/abt1.png",
         "layout": "row-normal"
       }
     },

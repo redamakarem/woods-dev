@@ -143,6 +143,7 @@
         "6af2d2c8-288c-4908-83a7-56cb3b17ae3b": {
           "type": "ticker-item",
           "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/white-ticker-icon.png",
             "ticker-item-text": "RARE"
           }
         },

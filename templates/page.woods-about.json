@@ -122,49 +122,42 @@
         "108ed3aa-7aba-4eb0-975c-f400ea643e66": {
           "type": "ticker-item",
           "settings": {
-            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
             "ticker-item-text": "HIDDEN"
           }
         },
         "69206a47-723f-4a78-b796-8a5d6d75927d": {
           "type": "ticker-item",
           "settings": {
-            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
             "ticker-item-text": "TREASURE"
           }
         },
         "13e53aa7-b99b-43f2-9ae8-98fdeefbd228": {
           "type": "ticker-item",
           "settings": {
-            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
             "ticker-item-text": "WILD"
           }
         },
         "6af2d2c8-288c-4908-83a7-56cb3b17ae3b": {
           "type": "ticker-item",
           "settings": {
-            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
             "ticker-item-text": "RARE"
           }
         },
         "24fd657f-0911-4060-b6f5-f4207263c5c5": {
           "type": "ticker-item",
           "settings": {
-            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
             "ticker-item-text": "NATURE"
           }
         },
         "8b2d3820-7213-434e-881c-5516335b668c": {
           "type": "ticker-item",
           "settings": {
-            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
             "ticker-item-text": "PARADISE"
           }
         },
         "55a326de-800a-4416-8ff1-52ccd19dbf62": {
           "type": "ticker-item",
           "settings": {
-            "ticker-item-image": "shopify:\/\/shop_images\/image_16.png",
             "ticker-item-text": "SECRET"
           }
         }
@@ -211,21 +204,21 @@
         "e9e1b668-726d-4104-b813-d2a6b2ef0ceb": {
           "type": "column-elements",
           "settings": {
-            "column-image": "shopify:\/\/shop_images\/IMGL4040.png",
+            "column-image": "shopify:\/\/shop_images\/bp2.png",
             "column-content": "<h3>DARK &amp;\n LIGHT<\/h3>\n<ul class=\"text-dark font-size-12 line-height-16\">\n<li>SUNLIGHT<\/li>\n<li>SHADOWS<\/li>\n<li>TWILIGHT<\/li>\n<li>DEEP<\/li>\n<li>SHINE<\/li>\n<li>PURE<\/li>\n<li>REVEAL<\/li>\n<li>CONCEAL<\/li>\n<\/ul>"
           }
         },
         "00f26911-801c-4025-8968-7f35ce1504dd": {
           "type": "column-elements",
           "settings": {
-            "column-image": "shopify:\/\/shop_images\/IMGL4135_B.png",
+            "column-image": "shopify:\/\/shop_images\/bp3.png",
             "column-content": "<h3>DISCOVER THE UNKNWNON <\/h3>\n<ul class=\"text-dark font-size-12 line-height-16\">\n<li>HIDDEN<\/li>\n<li>TREASURES<\/li>\n<li>WILD<\/li>\n<li>RARE<\/li>\n<li>NATURE<\/li>\n<li>PARADISE<\/li>\n<li>SECRET<\/li>\n<li>JOURNEY<\/li>\n<\/ul>"
           }
         },
         "8cf6988b-a502-4d59-a435-3da24cddf444": {
           "type": "column-elements",
           "settings": {
-            "column-image": "shopify:\/\/shop_images\/IMGL3210.png",
+            "column-image": "shopify:\/\/shop_images\/abt4.png",
             "column-content": "<h3>STRENGTH &amp; CALM<\/h3>\n<ul class=\"text-dark font-size-12 line-height-16\">\n<li>TIMELESS<\/li>\n<li>POWER<\/li>\n<li>FOREVER<\/li>\n<li>LINGER<\/li>\n<li>CONTENT<\/li>\n<li>MINDFUL<\/li>\n<li>ENDURE<\/li>\n<li>OVERCOME<\/li>\n<\/ul>"
           }
         }
@@ -256,7 +249,6 @@
       "type": "image-with-text",
       "settings": {
         "text-section": "<h2 class=\"font-size-60 line-height-60 font-size-ls-32 line-height-ls-32 m-0\">Paradise<\/h2>\n\n<p class=\"font-size-20 font-size-ls-18 line-height-28 line-height-ls-24\">\nOn the hills near <strong><i class=\"font-weight-bold\">Siena, Italy<\/i> <\/strong>, hides a farm in a small patch of land between the shades of an oak forest. After being abandoned for 60 years, the farm now hosts a Perfumer Garden with wild and cultivated flora dedicated to the art of perfume. The farm is every perfumer’s dream garden with its ancient and new cultivars, and its own distilleries.\n<\/p>",
-        "image-section": "shopify:\/\/shop_images\/Screen_Shot_2022-06-01_at_06.29_1.png",
         "layout": "row-normal"
       }
     },
@@ -264,7 +256,6 @@
       "type": "image-with-text",
       "settings": {
         "text-section": "<h2 class=\"font-size-60 line-height-60 font-size-ls-32 line-height-ls-32 m-0\">Techniques<\/h2>\n<p class=\"font-size-20 font-size-ls-18 line-height-28 line-height-ls-24\">\nIt is also a space of research and innovation for Vincent Gambino, nose and artistic director of Amaranthus Herbis collections, who links traditional and modern techniques to open up to artistic perfumery. Vincent Gambino is the expert hand behind the perfect picking for each and every ingredient for The Woods Collection niche fragrances.\n<\/p>",
-        "image-section": "shopify:\/\/shop_images\/Screen_Shot_2022-06-01_at_06.31_1.png",
         "layout": "row-reverse"
       }
     },

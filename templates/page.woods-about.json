@@ -188,6 +188,13 @@
             "ticker-item-image": "shopify:\/\/shop_images\/white-ticker-icon.png",
             "ticker-item-text": "Test"
           }
+        },
+        "8cec5171-b7f0-4f1c-9e10-f2eb8204a9a4": {
+          "type": "ticker-item",
+          "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/white-ticker-icon.png",
+            "ticker-item-text": "Lalalala"
+          }
         }
       },
       "block_order": [
@@ -200,7 +207,8 @@
         "55a326de-800a-4416-8ff1-52ccd19dbf62",
         "5487b500-705b-440e-be8a-e07c06a2a8bc",
         "93be0c5e-fbf2-47b9-85e1-f7b5d5b89b25",
-        "8bb45d7d-de21-4784-96df-a68277363977"
+        "8bb45d7d-de21-4784-96df-a68277363977",
+        "8cec5171-b7f0-4f1c-9e10-f2eb8204a9a4"
       ],
       "settings": {
         "blog-posts-slider": "asd asd asd",

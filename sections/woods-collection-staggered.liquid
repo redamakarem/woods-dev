@@ -12,6 +12,11 @@
                         <div class="item anchor-position">
                             <img class="season-radius-img" src="{{ section.settings.product1.featured_image | image_url }}" alt="{{ product1.title | escape }}" />
                           <div class="image__overlay_season">
+                            <div>
+                                {% for image in section.settings.product1.images limit:1 offset:1 %}
+                                  <img src="{{ image | img_url: "medium" }}" />
+                                  {% endfor %}
+                              </div>
                             <div class="season-desc-style">
                                 <div class="product-title">{{section.settings.product1.title}}</div>
                                 <div class="product-price season-price-text">{{section.settings.product1.price | money_with_currency}}</div>
@@ -44,6 +49,11 @@
                         <div class="item anchor-position h-100">
                             <img class="season-radius-img" src="{{ section.settings.product3.featured_image | image_url }}" alt="{{ product3.title | escape }}" />
                           <div class="image__overlay_season">
+                            <div>
+                                {% for image in section.settings.product3.images limit:1 offset:1 %}
+                                  <img src="{{ image | img_url: "medium" }}" />
+                                  {% endfor %}
+                              </div>
                             <div class="season-desc-style">
                                 <div class="product-title">{{section.settings.product3.title}}</div>
                                 <div class="product-price season-price-text">{{section.settings.product3.price | money_with_currency}}</div>
@@ -55,6 +65,11 @@
                         <div class="item anchor-position">
                             <img class="season-radius-img" src="{{ section.settings.product4.featured_image | image_url }}" alt="{{ product4.title | escape }}" />
                           <div class="image__overlay_season">
+                            <div>
+                                {% for image in section.settings.product4.images limit:1 offset:1 %}
+                                  <img src="{{ image | img_url: "medium" }}" />
+                                  {% endfor %}
+                              </div>
                             <div class="season-desc-style">
                                 <div class="product-title">{{section.settings.product4.title}}</div>
                                 <div class="product-price season-price-text">{{section.settings.product4.price | money_with_currency}}</div>

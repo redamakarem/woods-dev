@@ -122,12 +122,14 @@
         "108ed3aa-7aba-4eb0-975c-f400ea643e66": {
           "type": "ticker-item",
           "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/white-ticker-icon.png",
             "ticker-item-text": "HIDDEN"
           }
         },
         "69206a47-723f-4a78-b796-8a5d6d75927d": {
           "type": "ticker-item",
           "settings": {
+            "ticker-item-image": "shopify:\/\/shop_images\/white-ticker-icon.png",
             "ticker-item-text": "TREASURE"
           }
         },
@@ -257,6 +259,7 @@
       "type": "image-with-text",
       "settings": {
         "text-section": "<h2 class=\"font-size-60 line-height-60 font-size-ls-32 line-height-ls-32 m-0\">Techniques<\/h2>\n<p class=\"font-size-20 font-size-ls-18 line-height-28 line-height-ls-24\">\nIt is also a space of research and innovation for Vincent Gambino, nose and artistic director of Amaranthus Herbis collections, who links traditional and modern techniques to open up to artistic perfumery. Vincent Gambino is the expert hand behind the perfect picking for each and every ingredient for The Woods Collection niche fragrances.\n<\/p>",
+        "image-section": "shopify:\/\/shop_images\/abt2.png",
         "layout": "row-reverse"
       }
     },

@@ -1,0 +1,35 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "show_title": true,
+        "show_content": true
+      }
+    },
+    "f610d572-fa34-4d0a-8120-d509f4c25150": {
+      "type": "sorting-collections",
+      "blocks": {
+        "77418da5-48b7-4fce-88ae-0bbf1a0b2d7d": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "best-sellers"
+          }
+        }
+      },
+      "block_order": [
+        "77418da5-48b7-4fce-88ae-0bbf1a0b2d7d"
+      ],
+      "settings": {
+        "size_of_columns": "4",
+        "max_count": 8,
+        "show_btn_more_products": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "f610d572-fa34-4d0a-8120-d509f4c25150"
+  ]
+}

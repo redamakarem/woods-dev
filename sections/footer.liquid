@@ -234,6 +234,7 @@
         <template class="js-loader-inline-style" data-key="{{ style_base_html | hmac_sha1: 'secret_key' }}">{{ style_base_html }}</template>
     {%- endif -%}
 {%- endif -%}
+{{ 'footer.css' | asset_url | stylesheet_tag }}
 <script>
     theme.AssetsLoader.loadInlineStyles();
 </script>

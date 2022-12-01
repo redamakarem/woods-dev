@@ -991,6 +991,7 @@
           },
           "1586284527889": {
             "type": "menu",
+            "disabled": true,
             "settings": {
               "title": "",
               "show_title_on_desktop": false,

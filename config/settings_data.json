@@ -984,7 +984,7 @@
             "settings": {
               "title": "",
               "show_title_on_desktop": false,
-              "menu": "",
+              "menu": "footer",
               "size": 0,
               "rows_limit": 0
             }
@@ -1549,7 +1549,9 @@
       "0df24bf0-aed2-41c4-a104-5c22188d24e8": {
         "type": "woods-collection-carousel-hover",
         "settings": {
-          "discover-slider": "wood"
+          "discover-slider": "wood",
+          "discover-title": "The woods collection",
+          "discover-hover-text": "Discover the woods collection"
         }
       }
     },

@@ -306,18 +306,18 @@
     {%- case block.type -%}
     {%- when 'menu' -%}
         {%- capture menu_html -%}
-<!--             <div class="footer__border d-lg-none"></div> -->
+            <div class="footer__border d-lg-none"></div>
             <div class="col-lg{% if block.settings.size > 0 %}-{{ block.settings.size }}{% endif %} remove_last">
                 {%- assign menu = linklists[block.settings.menu] -%}
-<!--           data-js-accordion="only-mobile" -->
+          data-js-accordion="only-mobile"
                 <div class="footer__section" >
-<!--                     <div class="footer__section-head position-relative" data-js-accordion-button>
+                    <div class="footer__section-head position-relative" data-js-accordion-button>
                         <h5 class="{% if block.settings.show_title_on_desktop != true %}d-lg-none {% endif %}py-10 py-lg-0 mb-0 mb-lg-10 text-uppercase">{{ block.settings.title | default: menu.title }}</h5>
                         {%- if block.settings.menu != blank -%}
                             {{ section_btn_close }}
                         {%- endif -%}
-                    </div> -->
-<!--            data-js-accordion-content -->
+                    </div>
+           
                     <div class="footer__section-content d-lg-block">
                         {%- if block.settings.menu != blank -%}
                             <ul class="list-unstyled pb-15 pb-lg-0{% if block.settings.rows_limit > 0 %} row no-gutters{% endif %}">
@@ -328,7 +328,7 @@
                                     
                                   {%- endif -%}
                                   </div>
-<!--                                     {%- if block.settings.rows_limit > 0 -%}
+                                    {%- if block.settings.rows_limit > 0 -%}
                                         {%- assign index_modulo = forloop.index0 | modulo: block.settings.rows_limit -%}
                                         {%- if forloop.first -%} 
                                             <div class="col-lg">
@@ -342,7 +342,7 @@
                                         {%- if forloop.last -%}
                                             </div>
                                         {%- endif -%}
-                                    {%- endif -%} -->
+                                    {%- endif -%}
                                 {%- endfor -%}
                             </ul>
                         {%- endif -%}

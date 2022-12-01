@@ -763,11 +763,11 @@
         {{ back_to_top }}
     {%- when '7' -%}
         <footer id="footer" class="color-bg-footer m-25 border-radius-12 footer footer--style-{{ section.settings.style }}{% if template != 'index' %} {{ footer_other_page_margins }}{% endif %}{% if section.settings.enable_fixed %} pt-1{% endif %} text-center text-lg-left js-footer"{{ fixed_attr }}>
-<!--             <div class="footer__border-top d-none d-lg-block"></div> -->
+            <div class="footer__border-top d-none d-lg-block"></div>
             <div class="footer__content pt-lg-55 pb-lg-50 text-center">
                 <div class="container">
                     <div class="row flex-column flex-lg-row py-45 py-lg-0">
-<!--                         <div class="footer__border-top w-100 mb-45 d-lg-none"></div> -->
+                        <div class="footer__border-top w-100 mb-45 d-lg-none"></div>
                         <div class="col-lg-7">
                             {{ subscription }}
                         </div>
@@ -787,7 +787,7 @@
                     </div>
                 </div>
             </div>
-<!--             {%- if social -%}
+            {%- if social -%}
                 <div class="d-none d-lg-block text-center">
                     <div class="footer__border-bottom d-none d-lg-block"></div>
                     <div class="footer__border d-lg-none"></div>
@@ -797,8 +797,8 @@
                         </div>
                     </div>
                 </div>
-            {%- endif -%} -->
-<!--             {%- if copyright or payments -%}
+            {%- endif -%}
+            {%- if copyright or payments -%}
                 <div class="footer__border-bottom"></div>
                 <div class="footer__tape py-lg-15 text-center">
                     <div class="container">
@@ -818,7 +818,7 @@
                         {%- endif -%}
                     </div>
                 </div>
-            {%- endif -%} -->
+            {%- endif -%}
         </footer>
         {{ back_to_top }}
     {%- endcase -%}

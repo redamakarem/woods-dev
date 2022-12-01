@@ -7,36 +7,6 @@
 
 {% capture style_base_html %}
     <style>
-  .footer-subscribe{
-    border-color:black !important;
-  }
-  .color-bg-footer{
-      background-color: #f7f7f7;
-  }
-  .color-bg-transparent{
-      background-color: transparent !important;
-  }
-  .btn-sub-hover:hover{
-      background-color: black !important;
-  }
-  .footer__section-content>ul>div>li>a{
-    color:black !important;
-  }
-  .remove_last:last-of-type {
-  display:none;
-  }
-  .rounded-socials{
-    border: 1px solid black;
-    justify-content: center;
-    align-items: center !important;
-    border-radius: 50% !important;
-    width: 30px;
-    height: 30px;
-    background-color:black;
-  }
-  .i-socials{
-    height:20px !important;
-  }
         :root {
             --footer-copyright-size: {{ settings.font_size_body | times: 0.769 | round }}px;
             --footer-copyright-line-height: {{ settings.font_size_body | times: 0.769 | round | times: 1.6 | round }}px;
@@ -301,44 +271,35 @@
         {%- endcapture -%}
     {%- endif -%}
 {%- endif -%}
-{{ 'footer.css' | asset_url | stylesheet_tag }}
 {%- for block in section.blocks -%}
     {%- case block.type -%}
     {%- when 'menu' -%}
         {%- capture menu_html -%}
             <div class="footer__border d-lg-none"></div>
-            <div class="col-lg{% if block.settings.size > 0 %}-{{ block.settings.size }}{% endif %} remove_last">
+            <div class="col-lg{% if block.settings.size > 0 %}-{{ block.settings.size }}{% endif %}">
                 {%- assign menu = linklists[block.settings.menu] -%}
-          
-                <div class="footer__section" >
+                <div class="footer__section" data-js-accordion="only-mobile">
                     <div class="footer__section-head position-relative" data-js-accordion-button>
                         <h5 class="{% if block.settings.show_title_on_desktop != true %}d-lg-none {% endif %}py-10 py-lg-0 mb-0 mb-lg-10 text-uppercase">{{ block.settings.title | default: menu.title }}</h5>
                         {%- if block.settings.menu != blank -%}
                             {{ section_btn_close }}
                         {%- endif -%}
                     </div>
-           
-                    <div class="footer__section-content d-lg-block">
+                    <div class="footer__section-content d-none d-lg-block" data-js-accordion-content>
                         {%- if block.settings.menu != blank -%}
                             <ul class="list-unstyled pb-15 pb-lg-0{% if block.settings.rows_limit > 0 %} row no-gutters{% endif %}">
                                 {%- for link in menu.links -%}
-                                  {%- if link.url != blank -%}
-                                    <div class="col-lg">
-                                    <li class="py-5 py-lg-0 mb-10"><a href="{{ link.url }}">{{ link.title }}</a></li>
-                                    
-                                  {%- endif -%}
-                                  </div>
                                     {%- if block.settings.rows_limit > 0 -%}
                                         {%- assign index_modulo = forloop.index0 | modulo: block.settings.rows_limit -%}
-                                        {%- if forloop.first -%} 
+                                        {%- if forloop.first -%}
                                             <div class="col-lg">
-                                        {%- elsif index_modulo == 0 -%} 
+                                        {%- elsif index_modulo == 0 -%}
                                             </div>
                                             <div class="col-lg">
                                         {%- endif -%}
                                     {%- endif -%}
                                     <li class="py-5 py-lg-0"><a href="{{ link.url }}">{{ link.title }}</a></li>
-                                   {%- if block.settings.rows_limit > 0 -%} 
+                                    {%- if block.settings.rows_limit > 0 -%}
                                         {%- if forloop.last -%}
                                             </div>
                                         {%- endif -%}
@@ -350,7 +311,7 @@
                 </div>
             </div>
         {%- endcapture -%}
-        {%- assign menus = menus  -%}
+        {%- assign menus = menus | append: menu_html -%}
     {%- when 'custom_html' -%}
         {%- capture custom_html -%}
             <div class="footer__border row d-lg-none"></div>
@@ -373,7 +334,7 @@
         {%- endcapture -%}
     {%- when 'social_media' -%}
         {%- capture social -%}
-            <div class="footer__social-media{% if section.settings.type == '3' or section.settings.type == '7' %} d-lg-flex{% endif %} mb-15 mb-md-0">
+            <div class="footer__social-media{% if section.settings.type == '3' or section.settings.type == '7' %} d-lg-flex flex-lg-center{% endif %}">
                 {%- if block.settings.title != blank -%}
                     {%- if section.settings.type == '3' or section.settings.type == '7' -%}
                         <h5 class="d-none d-lg-block mb-10 mb-lg-0 mr-lg-20 text-uppercase">{{ block.settings.title }}</h5>
@@ -397,7 +358,7 @@
         {%- capture subscription -%}
             {%- capture title -%}
                 {%- if block.settings.title != blank -%}
-                    <h3 class="m-0 text-uppercase ft-charter line-height-28 line-height-32 line-height-ls-24 font-size-ls-20">{{ block.settings.title }}</h3>
+                    <h5 class="mb-10 text-uppercase">{{ block.settings.title }}</h5>
                 {%- endif -%}
                 {%- if block.settings.paragraph != blank -%}
                     <p class="mb-10">{{ block.settings.paragraph }}</p>
@@ -423,10 +384,8 @@
                         {% form 'customer', id: null, class: 'form-group--type-column d-flex flex-column align-items-lg-start mb-10' %}
                             {% render 'form-get-check-error-popup' %}
                             <input type="hidden" name="contact[tags]" value="newsletter">
-                          <div class="d-flex w-100 p-8 border rounded footer-subscribe">
-                            <input type="email" name="contact[email]" class="color-bg-transparent m-0 border-top-0 footer-subscribe border-left-0 white-bg-subscribe border-bottom-0{% if form.errors %} input--error{% endif %}" placeholder="{{ block.settings.placeholder }}" required="required">
-                            <input type="submit" class="color-bg-transparent btn border-0 font-weight-bold btn-sub-hover" name="commit" value="{{ block.settings.button_text }}">
-                          </div>
+                            <input type="email" name="contact[email]" class="mb-10 mb-lg-20{% if form.errors %} input--error{% endif %}" placeholder="{{ block.settings.placeholder }}" required="required">
+                            <input type="submit" class="btn" name="commit" value="{{ block.settings.button_text }}">
                         {% endform %}
                     {%- elsif settings.subscription_method == 'mailchimp' -%}
                         <form action="{{ settings.subscription_mailchimp_form_action }}" method="post" class="form-group--type-column d-flex flex-column align-items-lg-start mb-10" target="_blank">
@@ -461,11 +420,11 @@
                     </div>
                 </div>
             {%- else -%}
-                <div class="text-left footer__subscription row{% if section.settings.type != '4' %} mb-30{% endif %}">
-                    <div class="col-lg-12 mb-20 mb-md-40 ">
+                <div class="footer__subscription row{% if section.settings.type != '4' %} mb-25{% endif %}">
+                    <div class="col-lg-12 mb-10">
                         {{ title }}
                     </div>
-                    <div class="col-lg-10">
+                    <div class="col-lg-12">
                         {{ content }}
                     </div>
                 </div>
@@ -473,7 +432,7 @@
         {%- endcapture -%}
     {%- when 'copyright' -%}
         {%- capture copyright -%}
-            <div class="footer__copyright font-size-14 line-height-24 opacity-50 pt-lg-0{% if section.settings.type == '1' or section.settings.type == '2' or section.settings.type == '5' %} mt-20 mt-lg-0{% endif %}">
+            <div class="footer__copyright pt-lg-0{% if section.settings.type == '1' or section.settings.type == '2' or section.settings.type == '5' %} mt-20 mt-lg-0{% endif %}">
                 <div class="mb-0">
                     {%- case section.settings.type -%}
                         {%- when '3' %}{% assign copyright_default_page = 'include-footer-copyright-2' -%}
@@ -499,7 +458,7 @@
     {%- endcase -%}
 {%- endfor -%}
 {%- capture menus -%}
-    <div class="d-flex text-left">
+    <div class="footer__menus row flex-column flex-lg-row">
         {{ menus }}
     </div>
 {%- endcapture -%}
@@ -762,28 +721,21 @@
         </footer>
         {{ back_to_top }}
     {%- when '7' -%}
-        <footer id="footer" class="color-bg-footer m-25 border-radius-12 footer footer--style-{{ section.settings.style }}{% if template != 'index' %} {{ footer_other_page_margins }}{% endif %}{% if section.settings.enable_fixed %} pt-1{% endif %} text-center text-lg-left js-footer"{{ fixed_attr }}>
+        <footer id="footer" class="footer footer--style-{{ section.settings.style }}{% if template != 'index' %} {{ footer_other_page_margins }}{% endif %}{% if section.settings.enable_fixed %} pt-1{% endif %} text-center text-lg-left js-footer"{{ fixed_attr }}>
             <div class="footer__border-top d-none d-lg-block"></div>
-            <div class="footer__content pt-lg-55 pb-lg-50 text-center">
+            <div class="footer__content pt-lg-55 pb-lg-50">
                 <div class="container">
-                    <div class="row flex-column flex-lg-row py-45 py-lg-0">
+                    <div class="row">
                         <div class="footer__border-top w-100 mb-45 d-lg-none"></div>
-                        <div class="col-lg-7">
+                        <div class="col-12 col-lg">
                             {{ subscription }}
                         </div>
-                        <div class="col-lg-1">
+                        <div class="col-12 col-lg">
                             {{ custom_html }}
                         </div>
-                        <div class="col-lg-4 footer-right">
+                        <div class="col-12 col-lg">
                             {{ menus }}
-                        {%- if social or copyright -%}
-                          <div class="footer__tape pt-20 d-flex justify-content-between align-items-center flex-column flex-md-row">
-                            {{ social }}
-                            {{ copyright }}
-                          </div>
-                        {%- endif -%}
                         </div>
-                      
                     </div>
                 </div>
             </div>

@@ -1003,7 +1003,7 @@
             "settings": {
               "title": "Socials",
               "show_facebook": true,
-              "show_twitter": false,
+              "show_twitter": true,
               "show_instagram": true,
               "show_pinterest": false,
               "show_youtube": true,
@@ -1043,7 +1043,7 @@
           "0be306e5-f280-4af3-bd4e-dc800352df71"
         ],
         "settings": {
-          "type": "7",
+          "type": "2",
           "style": "1",
           "show_logo": false,
           "show_button_back_to_top": true,

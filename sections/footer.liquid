@@ -350,7 +350,7 @@
                 </div>
             </div>
         {%- endcapture -%}
-        {%- assign menus = menus | append: menu_html -%}
+{% comment %}         {%- assign menus = menus | append: menu_html -%} {% endcomment %}
     {%- when 'custom_html' -%}
         {%- capture custom_html -%}
             <div class="footer__border row d-lg-none"></div>

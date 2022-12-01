@@ -1021,6 +1021,16 @@
             "type": "payments",
             "settings": {
             }
+          },
+          "0be306e5-f280-4af3-bd4e-dc800352df71": {
+            "type": "menu",
+            "settings": {
+              "title": "",
+              "show_title_on_desktop": true,
+              "menu": "",
+              "size": 0,
+              "rows_limit": 0
+            }
           }
         },
         "block_order": [
@@ -1028,7 +1038,8 @@
           "1586284608625",
           "1586284588048",
           "footer-0",
-          "1586284627913"
+          "1586284627913",
+          "0be306e5-f280-4af3-bd4e-dc800352df71"
         ],
         "settings": {
           "type": "7",

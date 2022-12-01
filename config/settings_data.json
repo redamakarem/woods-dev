@@ -979,23 +979,12 @@
       "footer": {
         "type": "footer",
         "blocks": {
-          "1586284525260": {
+          "1586284527889": {
             "type": "menu",
             "settings": {
               "title": "",
               "show_title_on_desktop": false,
               "menu": "footer",
-              "size": 0,
-              "rows_limit": 0
-            }
-          },
-          "1586284527889": {
-            "type": "menu",
-            "disabled": true,
-            "settings": {
-              "title": "",
-              "show_title_on_desktop": false,
-              "menu": "",
               "size": 0,
               "rows_limit": 0
             }
@@ -1007,16 +996,6 @@
               "paragraph": "",
               "placeholder": "Enter Your Email",
               "button_text": "SUBSCRIBE"
-            }
-          },
-          "1586284530934": {
-            "type": "menu",
-            "settings": {
-              "title": "",
-              "show_title_on_desktop": true,
-              "menu": "",
-              "size": 0,
-              "rows_limit": 0
             }
           },
           "1586284588048": {
@@ -1045,10 +1024,8 @@
           }
         },
         "block_order": [
-          "1586284525260",
           "1586284527889",
           "1586284608625",
-          "1586284530934",
           "1586284588048",
           "footer-0",
           "1586284627913"

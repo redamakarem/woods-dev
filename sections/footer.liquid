@@ -309,7 +309,7 @@
             <div class="footer__border d-lg-none"></div>
             <div class="col-lg{% if block.settings.size > 0 %}-{{ block.settings.size }}{% endif %} remove_last">
                 {%- assign menu = linklists[block.settings.menu] -%}
-          data-js-accordion="only-mobile"
+          
                 <div class="footer__section" >
                     <div class="footer__section-head position-relative" data-js-accordion-button>
                         <h5 class="{% if block.settings.show_title_on_desktop != true %}d-lg-none {% endif %}py-10 py-lg-0 mb-0 mb-lg-10 text-uppercase">{{ block.settings.title | default: menu.title }}</h5>

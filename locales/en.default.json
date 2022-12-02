@@ -672,6 +672,9 @@
       "customer_account": {
         "sign_out_link_label": "LOGOUT"
       }
+    },
+    "links": {
+      "powered_by_shopify": " "
     }
   },
   "customer_accounts": {

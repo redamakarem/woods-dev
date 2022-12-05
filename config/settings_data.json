@@ -1223,10 +1223,10 @@
         "settings": {
           "collection-title": "FRAGRANCES OF THE SEASON",
           "collection-subtitle": "SPRING\/SUMMER COLLECTION",
-          "product1": "panorama",
-          "product2": "panorama",
-          "product3": "panorama",
-          "product4": "panorama"
+          "product1": "eden-by-the-woods-collection",
+          "product2": "bloom",
+          "product3": "dancing-leaves-by-the-woods-collection",
+          "product4": "dusk-by-the-woods-collection"
         }
       },
       "1664807300be5b3253": {
@@ -1480,7 +1480,7 @@
             "type": "collection",
             "settings": {
               "title": "",
-              "collection": "best-sellers"
+              "collection": "natural-by-the-woods-collection"
             }
           }
         },
@@ -1538,7 +1538,7 @@
       "0df24bf0-aed2-41c4-a104-5c22188d24e8": {
         "type": "woods-collection-carousel-hover",
         "settings": {
-          "discover-slider": "wood",
+          "discover-slider": "natural-by-the-woods-collection",
           "discover-title": "The woods collection",
           "discover-hover-text": "Discover the woods collection"
         }
